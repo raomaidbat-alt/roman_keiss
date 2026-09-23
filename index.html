@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Роман | ИИ-ассистенты и автоматизация</title>
+  <meta name="description" content="Оптимизирую бизнес-процессы через умный ИИ-обзвон и автоматизацию продаж. Голосовые ассистенты для B2B-аутрича, реактивации базы, квалификации лидов и интеграции с МойСклад/CRM." />
+  <meta property="og:title" content="Роман | ИИ-ассистенты и автоматизация" />
+  <meta property="og:description" content="Оптимизирую бизнес-процессы через умный ИИ-обзвон и автоматизацию продаж. Голосовые ассистенты для B2B-аутрича, реактивации базы и квалификации лидов." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            goulash: {
+              cyan: '#00F5FF',
+              cyanDark: '#00C8FF',
+              cyanGlow: 'rgba(0, 245, 255, 0.15)',
+              bgDark: '#0B0E14',
+              surface: '#11161F',
+              card: '#18202C',
+              cardHover: '#1F2937',
+              border: '#222B38',
+              borderCyan: 'rgba(0, 245, 255, 0.35)',
+            }
+          },
+          boxShadow: {
+            'neon-cyan': '0 0 25px rgba(0, 245, 255, 0.25)',
+            'neon-cyan-sm': '0 0 12px rgba(0, 245, 255, 0.2)',
+            'neon-cyan-lg': '0 0 45px rgba(0, 245, 255, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0B0E14;
+      color: #E2E8F0;
+    }
+    .hud-border {
+      position: relative;
+    }
+    .hud-border::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #00F5FF, transparent);
+    }
+  </style>
+</head>
+<body class="bg-[#0B0E14] text-slate-200 font-sans antialiased selection:bg-goulash-cyan selection:text-black min-h-screen flex flex-col">
+
+  <!-- STICKY GOULASH.TECH HEADER -->
+  <header id="main-header" class="sticky top-0 z-50 bg-[#0B0E14]/95 backdrop-blur-md border-b border-goulash-border shadow-md transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand & Candidate Title -->
+      <a id="brand-logo" href="#hero" class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-goulash-cyan rounded-xl p-1">
+        <div class="w-10 h-10 rounded-xl bg-goulash-cyan/10 border border-goulash-cyan/30 flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform duration-200">
+          <img src="/goulash-logo.svg" alt="Goulash.tech" class="w-full h-full object-contain" />
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="text-base sm:text-lg font-extrabold text-white tracking-tight leading-snug">
+              Роман <span class="text-goulash-cyan font-bold">| AI &amp; Automation</span>
+            </span>
+            <span class="hidden lg:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan">
+              For Goulash.Tech
+            </span>
+          </div>
+          <span class="text-xs text-slate-400 font-medium">Архитектура продаж • ИИ-обзвон • Оптимизация процессов</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav id="desktop-nav" class="hidden lg:flex items-center gap-1 xl:gap-2">
+        <a id="nav-why-goulash" href="#why-goulash" class="px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-300 hover:text-goulash-cyan hover:bg-goulash-surface rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-bullseye text-goulash-cyan text-xs"></i>
+          <span>Почему Goulash.Tech</span>
+        </a>
+        <a id="nav-jarvis-ai" href="#jarvis-ai" class="px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-300 hover:text-goulash-cyan hover:bg-goulash-surface rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-robot text-goulash-cyan text-xs"></i>
+          <span>JARVIS &amp; ИИ</span>
+        </a>
+        <a id="nav-interview" href="#interview-questions" class="px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-300 hover:text-goulash-cyan hover:bg-goulash-surface rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-question text-goulash-cyan text-xs"></i>
+          <span>Вопросы для интервью</span>
+        </a>
+        <a id="nav-cases" href="#projects" class="px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-300 hover:text-goulash-cyan hover:bg-goulash-surface rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-layer-group text-goulash-cyan text-xs"></i>
+          <span>Кейсы (10)</span>
+        </a>
+        <a id="nav-contact" href="#contact" class="px-3.5 py-2 text-xs xl:text-sm font-semibold text-slate-300 hover:text-goulash-cyan hover:bg-goulash-surface rounded-lg transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-paper-plane text-goulash-cyan text-xs"></i>
+          <span>Контакты</span>
+        </a>
+      </nav>
+
+      <!-- Header CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a id="nav-tg-btn" href="https://t.me/Pokeroho" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold text-white bg-goulash-surface hover:bg-goulash-card rounded-xl border border-goulash-border hover:border-goulash-cyan/50 shadow-sm transition-all">
+          <i class="fa-brands fa-telegram text-goulash-cyan text-sm"></i>
+          <span>@Pokeroho</span>
+        </a>
+        <a id="nav-discuss-btn" href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold text-black bg-goulash-cyan hover:bg-goulash-cyanDark rounded-xl shadow-neon-cyan-sm hover:shadow-neon-cyan transition-all">
+          <span>Обсудить задачи</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-lg text-slate-300 hover:text-white hover:bg-goulash-surface focus:outline-none focus:ring-2 focus:ring-goulash-cyan" aria-label="Открыть меню">
+        <i id="hamburger-icon" class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-goulash-border bg-goulash-surface px-4 pt-3 pb-6 space-y-2 shadow-2xl">
+      <a id="m-nav-why-goulash" href="#why-goulash" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 hover:bg-goulash-card hover:text-goulash-cyan">
+        <span class="flex items-center gap-2.5"><i class="fa-solid fa-bullseye text-goulash-cyan"></i> Почему именно Goulash.Tech</span>
+        <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+      </a>
+      <a id="m-nav-jarvis-ai" href="#jarvis-ai" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 hover:bg-goulash-card hover:text-goulash-cyan">
+        <span class="flex items-center gap-2.5"><i class="fa-solid fa-robot text-goulash-cyan"></i> ИИ как JARVIS &amp; Мемы</span>
+        <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+      </a>
+      <a id="m-nav-interview" href="#interview-questions" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 hover:bg-goulash-card hover:text-goulash-cyan">
+        <span class="flex items-center gap-2.5"><i class="fa-solid fa-circle-question text-goulash-cyan"></i> Вопросы для собеседования</span>
+        <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+      </a>
+      <a id="m-nav-cases" href="#projects" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 hover:bg-goulash-card hover:text-goulash-cyan">
+        <span class="flex items-center gap-2.5"><i class="fa-solid fa-layer-group text-goulash-cyan"></i> Реализованные кейсы (10)</span>
+        <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+      </a>
+      <a id="m-nav-contact" href="#contact" class="mobile-link flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-semibold text-slate-200 hover:bg-goulash-card hover:text-goulash-cyan">
+        <span class="flex items-center gap-2.5"><i class="fa-solid fa-paper-plane text-goulash-cyan"></i> Контакты</span>
+        <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+      </a>
+      <div class="pt-3 border-t border-goulash-border flex flex-col gap-2">
+        <a id="m-cta-tg" href="https://t.me/Pokeroho" target="_blank" rel="noopener noreferrer" class="mobile-link w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-goulash-cyan/15 text-goulash-cyan font-bold text-sm hover:bg-goulash-cyan/25 border border-goulash-cyan/30">
+          <i class="fa-brands fa-telegram"></i>
+          <span>Связаться в Telegram (@Pokeroho)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- 1. HERO SECTION (SMART AI-CALLING & SALES AUTOMATION HERO) -->
+    <section id="hero" class="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 border-b border-goulash-border bg-[#0B0E14]">
+      
+      <!-- Subtle Ambient Glow (Soft, Non-flickering) -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-goulash-cyan/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          
+          <!-- Top Badge with Photo & Identity -->
+          <div id="hero-badge" class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-goulash-surface border border-slate-700/80 text-slate-200 text-xs font-semibold tracking-wide mb-6 shadow-sm">
+            <img src="/roman-photo.svg" alt="Роман" class="w-6 h-6 rounded-full object-cover border border-goulash-cyan/50 shadow-2xs" />
+            <span class="w-2 h-2 rounded-full bg-goulash-cyan"></span>
+            <span>Роман | ИИ-ассистенты и автоматизация</span>
+          </div>
+
+          <!-- Headline (H1) -->
+          <h1 id="hero-headline" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+            Оптимизирую бизнес-процессы через умный <span class="text-goulash-cyan">ИИ-обзвон и автоматизацию продаж</span>
+          </h1>
+
+          <!-- Lead Paragraph (Subtitle under H1) -->
+          <p id="hero-subheadline" class="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed mb-8 max-w-3xl mx-auto font-normal">
+            Внедряю голосовых ИИ-ассистентов для B2B-аутрича, реактивации базы и квалификации лидов. Оптимизирую работу отдела продаж, полностью забирая рутину у менеджеров. Принципиально не настраиваю классический платный трафик — строю автономные воронки. Только прозрачные системы, честное ценообразование без фиктивных скидок и измеримый результат для вашего бизнеса.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div id="hero-actions" class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12">
+            <a id="btn-view-cases" href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm font-bold text-black bg-goulash-cyan hover:bg-goulash-cyanDark rounded-xl shadow-neon-cyan-sm hover:shadow-neon-cyan hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+              <i class="fa-solid fa-layer-group text-black text-sm"></i>
+              <span>Смотреть все 10 кейсов</span>
+            </a>
+            <a id="btn-view-jarvis" href="#jarvis-ai" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm font-bold text-white bg-goulash-surface hover:bg-goulash-card rounded-xl border border-slate-700/80 shadow-sm hover:border-goulash-cyan/50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+              <i class="fa-solid fa-bolt text-goulash-cyan text-sm"></i>
+              <span>Философия JARVIS &amp; ИИ</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- 3 BOTTOM METRIC CARDS (AS REQUESTED) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-2">
+          
+          <!-- Card 1: 0 часов -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg border border-goulash-cyan/20">
+                  <i class="fa-solid fa-stopwatch-20"></i>
+                </div>
+                <span class="text-2xl sm:text-3xl font-extrabold text-goulash-cyan tracking-tight font-mono">0 часов</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                Нулевая рутина менеджеров
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Тратится менеджерами на рутинный холодный прозвон
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-goulash-border flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
+              <i class="fa-solid fa-check"></i>
+              <span>Менеджеры работают только с теплыми лидами</span>
+            </div>
+          </div>
+
+          <!-- Card 2: 24/7 -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg border border-goulash-cyan/20">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <span class="text-2xl sm:text-3xl font-extrabold text-goulash-cyan tracking-tight font-mono">24/7</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                Автономный ИИ-обзвон
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Бесперебойный ИИ-обзвон и автоматический скоринг базы
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-goulash-border flex items-center gap-1.5 text-xs font-semibold text-goulash-cyan">
+              <i class="fa-solid fa-check"></i>
+              <span>Моментальная квалификация и запись в CRM</span>
+            </div>
+          </div>
+
+          <!-- Card 3: 100% -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg border border-goulash-cyan/20">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400 tracking-tight font-mono">100%</span>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2">
+                Честная и чистая смета
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Прозрачность архитектуры и честные сметы без скрытых наценок
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-goulash-border flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
+              <i class="fa-solid fa-check"></i>
+              <span>Прямой измеримый результат для вашего бизнеса</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. IRON MAN & JARVIS MEME PHILOSOPHY SECTION -->
+    <section id="jarvis-ai" class="py-16 sm:py-24 bg-[#0B0E14] border-b border-goulash-border relative overflow-hidden">
+      <!-- Background Ambient Grid Glow -->
+      <div class="absolute inset-0 cyber-grid opacity-30 pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-goulash-surface text-goulash-cyan text-xs font-bold uppercase tracking-wider mb-3 border border-goulash-borderCyan shadow-neon-cyan-sm">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Философия инженерии &amp; ИИ</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            ИИ как JARVIS: Железный Человек <span class="text-goulash-cyan">против пустого хайпа</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-relaxed">
+            «Я фанат Железного Человека с детства. Для меня ИИ — это не модная игрушка для бессмысленных картинок. Это реальный шаг к тому, чтобы стать Железным Человеком: создать собственный цифровой экзоскелет (JARVIS), который забирает на себя 90% рутины и умножает инженерную мощь в разы.»
+          </p>
+        </div>
+
+        <!-- 2 MEME CARDS COMPARISON (EXPECTATION VS MY REALITY) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          
+          <!-- MEME CARD 1: Как все видят "ИИ" (Тони Старк закатывает глаза) -->
+          <div class="bg-goulash-surface rounded-2xl border border-red-500/30 shadow-xl overflow-hidden flex flex-col justify-between group hover:border-red-500/60 transition-all duration-300">
+            <div>
+              <!-- Visual Image / Meme 1 -->
+              <div class="relative w-full aspect-[16/9] bg-[#07090D] overflow-hidden border-b border-red-500/20">
+                <img 
+                  src="https://skillbox.ru/upload/setka_images/14293604122024_c40958f01c4c8c7f4079e3095b3b9f1dd761f38c.jpg" 
+                  alt="Мем: Тони Старк закатывает глаза от хайпа вокруг ИИ" 
+                  class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                />
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-red-900/80 border border-red-500 text-red-200 text-[11px] font-bold">
+                  ❌ Хайп &amp; Разочарование
+                </div>
+              </div>
+
+              <!-- Content Description -->
+              <div class="p-6">
+                <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                  <span class="text-red-400">Как бизнес слышит слово «ИИ»:</span>
+                </h3>
+                <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-xmark text-red-400 mt-1 flex-shrink-0"></i>
+                    <span>Очередной бесполезный бот в Telegram, отвечающий невпопад и не знающий меню ресторана.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-xmark text-red-400 mt-1 flex-shrink-0"></i>
+                    <span>«Галлюцинации» нейросетей в отчетах, где путаются списания, граммовки и выручка.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-xmark text-red-400 mt-1 flex-shrink-0"></i>
+                    <span>Месяцы согласований и презентаций вместо простого скрипта, решающего боль повара прямо сейчас.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p-4 bg-red-950/20 border-t border-red-500/20 text-xs font-semibold text-red-300 flex items-center gap-2">
+              <i class="fa-solid fa-triangle-exclamation text-red-400"></i>
+              <span>Итог: Ресторатор устал от хайпа и не видит измеримого возврата инвестиций (ROI).</span>
+            </div>
+          </div>
+
+          <!-- MEME CARD 2: Как я работаю с ИИ (Тони Старк взрыв Иерихона / JARVIS) -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-borderCyan shadow-neon-cyan overflow-hidden flex flex-col justify-between group hover:border-goulash-cyan transition-all duration-300">
+            <div>
+              <!-- Visual Image / Meme 2 -->
+              <div class="relative w-full aspect-[16/9] bg-[#07090D] overflow-hidden border-b border-goulash-borderCyan">
+                <img 
+                  src="https://static.kinoafisha.info/upload/articles/558770850425.jpg" 
+                  alt="Мем: Тони Старк на фоне взрыва — настоящая мощь ИИ и автоматизации" 
+                  class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                  referrerpolicy="no-referrer"
+                  loading="lazy"
+                />
+                <div class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-goulash-cyan text-black text-[11px] font-extrabold shadow-neon-cyan-sm">
+                  ⚡ JARVIS Mode • Мой подход
+                </div>
+              </div>
+
+              <!-- Content Description -->
+              <div class="p-6">
+                <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                  <span class="text-goulash-cyan">Как я применяю ИИ в реальной работе:</span>
+                </h3>
+                <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300">
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-check text-goulash-cyan mt-1 flex-shrink-0"></i>
+                    <span>Сквозная связка: <strong>LLM + SQL + Python + API МойСклад/CRM</strong> без ручного переноса данных.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-check text-goulash-cyan mt-1 flex-shrink-0"></i>
+                    <span>Парсинг тысяч накладных от десятков поставщиков с авто-сопоставлением номенклатуры в базу.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i class="fa-solid fa-check text-goulash-cyan mt-1 flex-shrink-0"></i>
+                    <span>Мгновенное выявление скрытых потерь: аномальный расход лосося, сыра или упаковки на точках.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p-4 bg-goulash-cyan/10 border-t border-goulash-borderCyan text-xs font-bold text-goulash-cyan flex items-center gap-2">
+              <i class="fa-solid fa-bolt-lightning text-goulash-cyan"></i>
+              <span>Итог: 90% рутины отдано коду, ресторатор спокоен, команда работает в 10 раз быстрее.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- INTERACTIVE JARVIS RESTTECH SIMULATOR -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-goulash-surface border border-goulash-borderCyan shadow-2xl max-w-5xl mx-auto">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-goulash-border">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-goulash-cyan/10 border border-goulash-cyan/40 flex items-center justify-center text-goulash-cyan text-lg shadow-neon-cyan-sm">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                  <span>JARVIS RestTech Console: Симулятор сценариев</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">LIVE DEMO</span>
+                </h3>
+                <p class="text-xs text-slate-400">Протестируйте, как алгоритмы Романа решают 4 прикладные задачи ресторанной сети Goulash.Tech</p>
+              </div>
+            </div>
+
+            <!-- Scenario Selector Tabs -->
+            <div class="flex items-center gap-1.5 bg-[#07090D] p-1 rounded-xl border border-goulash-border overflow-x-auto">
+              <button type="button" onclick="switchJarvisDemo('waste')" id="jarvis-btn-waste" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-goulash-cyan text-black shadow-neon-cyan-sm transition-all whitespace-nowrap">
+                🍣 Списания «Сушкоф»
+              </button>
+              <button type="button" onclick="switchJarvisDemo('procure')" id="jarvis-btn-procure" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-transparent text-slate-300 hover:text-white transition-all whitespace-nowrap">
+                🥦 Закупки «Жизньмарт»
+              </button>
+              <button type="button" onclick="switchJarvisDemo('reviews')" id="jarvis-btn-reviews" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-transparent text-slate-300 hover:text-white transition-all whitespace-nowrap">
+                ⭐ Анализ отзывов
+              </button>
+              <button type="button" onclick="switchJarvisDemo('summary')" id="jarvis-btn-summary" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-transparent text-slate-300 hover:text-white transition-all whitespace-nowrap">
+                📊 Утренний брифинг
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Console Screen Content -->
+          <div class="mt-6 bg-[#07090D] rounded-xl border border-goulash-border p-4 sm:p-6 font-mono text-xs sm:text-sm text-slate-300 leading-relaxed shadow-inner">
+            <div id="jarvis-output-container">
+              <!-- Output will be replaced dynamically -->
+              <div class="flex items-center justify-between text-xs text-slate-500 pb-3 mb-3 border-b border-goulash-border">
+                <span class="text-goulash-cyan font-bold">JARVIS://pipeline/sushkof/waste_detector_v2.1</span>
+                <span class="text-emerald-400">● EXECUTION TIME: 0.18s • ACCURACY: 99.4%</span>
+              </div>
+              <p class="text-emerald-400 mb-2 font-bold">&gt; Входящий поток: 14 ресторанов «Сушкоф и пицца», смена за 21.09.2026</p>
+              <div class="p-3.5 rounded-lg bg-goulash-surface/80 border border-goulash-border mb-3 space-y-1 text-slate-200">
+                <p><span class="text-goulash-cyan">[АНАЛИЗ ТТК]</span> Норматив расхода лосося: 18.4 г на порцию ролла «Филадельфия Премиум»</p>
+                <p><span class="text-amber-400">[ОТКЛОНЕНИЕ]</span> Точка #4 (ул. 8 Марта): фактический расход 22.8 г (+23.9% к ТТК)</p>
+                <p><span class="text-red-400">[РИСК ВЫРУЧКИ]</span> Потеря маржи: ~34 800 ₽ за 3 смены из-за нарушения калибровки нарезки</p>
+                <p><span class="text-emerald-400">[АВТО-ДЕЙСТВИЕ]</span> Сформирован алерт шеф-повару точки #4 в Telegram с видеоинструкцией нарезки и пересчетом остатков в МойСклад.</p>
+              </div>
+              <p class="text-slate-400 text-xs">// Экономия времени управляющего: 4 часа ручной сверки актов списания.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. WHY I AM THE IDEAL FIT FOR GOULASH.TECH SECTION -->
+    <section id="why-goulash" class="py-16 sm:py-24 bg-[#0E1219] border-b border-goulash-border relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Executive Profile & Photo -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 sm:gap-8 mb-12 sm:mb-16 pb-8 border-b border-goulash-border">
+          
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-goulash-surface text-goulash-cyan text-xs font-bold uppercase tracking-wider mb-4 border border-goulash-borderCyan shadow-neon-cyan-sm">
+              <span class="w-1.5 h-1.5 rounded-full bg-goulash-cyan"></span>
+              <span>100% ВАКАНСИОННОЕ СООТВЕТСТВИЕ</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+              Почему именно я должен работать в <span class="text-goulash-cyan">Goulash.Tech</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed font-normal">
+              Опыт в продуктовом IT, понимание специфики ресторанов и ритейла, автономная разработка без бюрократии и нацеленность на прикладной результат.
+            </p>
+          </div>
+
+          <!-- Executive Author Photo & Status Card -->
+          <div class="p-4 sm:p-5 rounded-2xl bg-goulash-surface border border-goulash-borderCyan shadow-neon-cyan-sm flex items-center gap-4 sm:gap-5 flex-shrink-0 max-w-md w-full">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-goulash-cyan shadow-neon-cyan flex-shrink-0 bg-slate-900 relative group">
+              <img 
+                src="/roman-photo.svg" 
+                alt="Роман — AI & Automation Engineer" 
+                class="w-full h-full object-cover" 
+              />
+              <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none"></div>
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center gap-2">
+                <span class="text-base sm:text-lg font-extrabold text-white">Роман</span>
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Ready to start
+                </span>
+              </div>
+              <span class="text-xs text-slate-300 font-medium mt-0.5">
+                AI &amp; Automation Engineer • RestTech
+              </span>
+              <a 
+                href="https://t.me/Pokeroho" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-1.5 text-xs font-bold text-goulash-cyan hover:underline mt-2"
+              >
+                <i class="fa-brands fa-telegram text-sm text-goulash-cyan"></i>
+                <span>@Pokeroho</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 8 CARDS GRID (FIT HIGHLIGHTS) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          
+          <!-- Card 1: Понимание ресторанной специфики и склада -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>Склад, ERP &amp; ТТК</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Складской учет и специфика кухни
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Глубокий опыт с МойСклад, номенклатурными справочниками, партиями, остатками, актами списаний и себестоимостью. Понимаю, чем грозит ошибка в рецептуре на 10 грамм в масштабе 50 точек.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Говорю с шеф-поваром и закупщиком на одном языке.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Практический ИИ без галлюцинаций -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>LLM, RAG &amp; Agents</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Прикладной AI с гарантией точности
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Разметка датасетов (GigaChat, OpenAI), RAG-архитектуры, парсинг неструктурированных накладных, Function Calling. ИИ только структурирует данные, а расчеты идут детерминированно в коде.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                100% защита от галлюцинаций при подсчете денег.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Скорость поставки решений (Time-to-Market) -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>Быстрый MVP</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                MVP за 2–4 дня на боевых данных
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Не жду месяцами идеального ТЗ. Быстро беру боль ресторатора, собираю работающий сервис на Python/Web/Telegram, проверяю на реальных данных и итеративно улучшаю в бою.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Быстрый результат, который можно сразу пощупать.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Data Engineering & Бэкенд -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>Python &amp; SQL Data</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Сам собираю и связываю данные
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Python, SQLite/Postgres, REST API, JSON, Pandas, вебхуки. Не жду готовых выгрузок от аналитика — сам подключаюсь к базам, очищаю данные и строю дашборды с план/факт анализом.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Полная автономность в работе с сырыми данными.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Интеграции CRM, телефонии и касс -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>CRM &amp; Omnichannel</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Сквозная интеграция экосистемы
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Опыт связки Битрикс24, телефонии (Novofon, Asterisk), речевой аналитики (Yandex SpeechKit), Telegram Bot API и внутренних баз знаний. Никаких «лоскутных» решений.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Единая информационная среда для всей сети.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6: Долгосрочная стратегия и архитектура -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>Roadmap &amp; Scale</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Долгосрочное мышление
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Оцениваю масштабируемость каждого модуля: как сервис выдержит пиковые часы пятницы, как поведет себя при открытии 20 новых филиалов и насколько просто его поддерживать.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Архитектура, готовая к росту сети в разы.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 7: Командная работа и Agile -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-users-gear"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>Teamwork &amp; Docs</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Прозрачность и работа в команде
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Опыт лидства небольшой команды (3 человека), декомпозиция задач, работа по спринтам, документирование API и ведение базы знаний в Confluence/Notion.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Чистый код и понятная документация для коллег.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 8: Продуктовая ответственность "под ключ" -->
+          <div class="p-6 rounded-2xl bg-goulash-surface border border-goulash-border shadow-md hover:border-goulash-cyan/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-11 h-11 rounded-xl bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-lg mb-4 border border-goulash-cyan/30 group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-goulash-cyan mb-1">
+                <span>End-to-End Delivery</span>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-white tracking-tight mb-2">
+                Ответственность за конечный результат
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Любая разработка начинается с вопроса: <em>«Что после релиза станет быстрее, дешевле или прозрачнее для ресторана?»</em>. Отвечаю за продукт от базы данных до кнопки на экране повара.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-goulash-border bg-[#07090D]/60 p-3 rounded-xl border border-goulash-border flex items-start gap-2">
+              <i class="fa-solid fa-arrow-right text-xs text-goulash-cyan mt-0.5 flex-shrink-0"></i>
+              <p class="text-xs font-semibold text-white leading-snug">
+                Измеримый бизнес-результат, а не просто закрытые тикеты.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. TOP INTERVIEW QUESTIONS SECTION (DEEP PERSONAL & PROFESSIONAL FIT) -->
+    <section id="interview-questions" class="py-16 sm:py-24 bg-[#0B0E14] border-b border-goulash-border relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-goulash-surface text-goulash-cyan text-xs font-bold uppercase tracking-wider mb-3 border border-goulash-borderCyan shadow-neon-cyan-sm">
+            <i class="fa-solid fa-comments"></i>
+            <span>Гайд для интервьюера Goulash.Tech</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            Вопросы, которые лучше всего раскроют меня <span class="text-goulash-cyan">как человека и инженера</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-3 max-w-xl mx-auto leading-relaxed">
+            Если вы хотите быстро проверить мои инженерные принципы, критическое мышление и зрелость — задайте мне эти 6 вопросов на собеседовании:
+          </p>
+        </div>
+
+        <!-- 6 INTERACTIVE ACCORDION QUESTION CARDS -->
+        <div class="space-y-4">
+          
+          <!-- Вопрос 1 -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-border overflow-hidden transition-all duration-200 hover:border-goulash-cyan/50">
+            <button type="button" onclick="toggleFaq(1)" class="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 focus:outline-none">
+              <div class="flex items-start gap-3.5">
+                <span class="w-8 h-8 rounded-lg bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+                  01
+                </span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    «Как ты определяешь, когда ресторану нужен ИИ-агент, а когда достаточно простого SQL-скрипта или регламента?»
+                  </h3>
+                  <p class="text-xs text-goulash-cyan mt-1">О прагматизме, балансе «хайп vs польза» и экономии ресурсов бизнеса</p>
+                </div>
+              </div>
+              <i id="faq-icon-1" class="fa-solid fa-chevron-down text-slate-400 mt-2 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-1" class="hidden px-5 pb-6 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-goulash-border/60 pt-4 bg-[#07090D]/50">
+              <p class="mb-2"><strong>Мой ответ:</strong> 80% задач в ресторанных сетях не требуют нейросетей. Если данные структурированы (чеки в POS, остатки в МойСклад), обычный детерминированный код на Python/SQL работает в 100 раз быстрее, дешевле и с нулевой вероятностью ошибки.</p>
+              <p>ИИ нужен только там, где есть <strong>неструктурированный человеческий хаос</strong>: расшифровка звонков гостей («не положили соус»), распознавание криво сфотографированных накладных поставщиков на кухне, семантический поиск по 1000 регламентов сети и адаптивная квалификация сложных запросов.</p>
+            </div>
+          </div>
+
+          <!-- Вопрос 2 -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-border overflow-hidden transition-all duration-200 hover:border-goulash-cyan/50">
+            <button type="button" onclick="toggleFaq(2)" class="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 focus:outline-none">
+              <div class="flex items-start gap-3.5">
+                <span class="w-8 h-8 rounded-lg bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+                  02
+                </span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    «В сети "Сушкоф" или "Жизньмарт" прямо сейчас "горит" списание сырья. Твои действия в первые 72 часа?»
+                  </h3>
+                  <p class="text-xs text-goulash-cyan mt-1">О скорости, работе в стрессовых условиях и Time-to-Market</p>
+                </div>
+              </div>
+              <i id="faq-icon-2" class="fa-solid fa-chevron-down text-slate-400 mt-2 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-2" class="hidden px-5 pb-6 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-goulash-border/60 pt-4 bg-[#07090D]/50">
+              <ul class="space-y-2">
+                <li><strong>День 1 (Data Triage):</strong> Выгружаю сырые чеки и акты списания за последние 30 дней в Pandas. Сопоставляю нормативный расход по ТТК с фактическими остатками по точкам. Нахожу 3 филиала с максимальной аномалией.</li>
+                <li><strong>День 2 (Root Cause):</strong> Иду к управляющим этих точек. Проверяю: это воровство, порча, брак поставщика или ошибка поваров при калибровке весов?</li>
+                <li><strong>День 3 (Automation Fix):</strong> Разворачиваю Telegram-бота с авто-уведомлением: как только на точке списание за смену превышает 3% от нормы — шеф и куратор моментально получают алерт с указанием конкретного продукта.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Вопрос 3 -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-border overflow-hidden transition-all duration-200 hover:border-goulash-cyan/50">
+            <button type="button" onclick="toggleFaq(3)" class="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 focus:outline-none">
+              <div class="flex items-start gap-3.5">
+                <span class="w-8 h-8 rounded-lg bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+                  03
+                </span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    «Как ты гарантируешь, что LLM не "галлюцинирует" при парсинге накладных и расчете себестоимости?»
+                  </h3>
+                  <p class="text-xs text-goulash-cyan mt-1">Об архитектуре надежности, валидации схем и защите от ошибок</p>
+                </div>
+              </div>
+              <i id="faq-icon-3" class="fa-solid fa-chevron-down text-slate-400 mt-2 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-3" class="hidden px-5 pb-6 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-goulash-border/60 pt-4 bg-[#07090D]/50">
+              <p class="mb-2"><strong>Мой ответ:</strong> Архитектурный принцип "Strict Schema &amp; Zero-Trust LLM". Я никогда не доверяю нейросети математические операции или запись в базу без валидации.</p>
+              <p>1. Модель отдает только строгий JSON с Pydantic-схемой через Structured Outputs / Function Calling.<br/>
+              2. Бэкенд проверяет математический баланс: <code>Сумма позиций == Итог накладной</code>. Если расхождение хотя бы 1 копейка — транзакция блокируется и отправляется на верификацию человеку.<br/>
+              3. Сверка номенклатуры поставщика с внутренним справочником идет через гибридный поиск (векторные эмбеддинги + строгий Levenshtein distance).</p>
+            </div>
+          </div>
+
+          <!-- Вопрос 4 -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-border overflow-hidden transition-all duration-200 hover:border-goulash-cyan/50">
+            <button type="button" onclick="toggleFaq(4)" class="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 focus:outline-none">
+              <div class="flex items-start gap-3.5">
+                <span class="w-8 h-8 rounded-lg bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+                  04
+                </span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    «Что ты делаешь, когда стейкхолдер говорит: "Хочу, чтобы закупки делались сами", но документации нет?»
+                  </h3>
+                  <p class="text-xs text-goulash-cyan mt-1">О работе в условиях неопределенности и продуктовом интервью</p>
+                </div>
+              </div>
+              <i id="faq-icon-4" class="fa-solid fa-chevron-down text-slate-400 mt-2 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-4" class="hidden px-5 pb-6 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-goulash-border/60 pt-4 bg-[#07090D]/50">
+              <p>Я не требую от бизнеса идеального ТЗ. Я сажусь рядом с менеджером по закупкам и смотрю его рабочий день: откуда берутся остатки, по каким формулам он заказывает муку и сыр на пятницу, где перепроверяет цены поставщиков. Фиксирую скрытые правила («в дождь заказов на 20% больше») и строю первый полуавтоматический прототип с кнопкой «Подтвердить заказ директору».</p>
+            </div>
+          </div>
+
+          <!-- Вопрос 5 -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-border overflow-hidden transition-all duration-200 hover:border-goulash-cyan/50">
+            <button type="button" onclick="toggleFaq(5)" class="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 focus:outline-none">
+              <div class="flex items-start gap-3.5">
+                <span class="w-8 h-8 rounded-lg bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+                  05
+                </span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    «Расскажи про самый болезненный сбой в твоей автоматизации и какие уроки ты извлек?»
+                  </h3>
+                  <p class="text-xs text-goulash-cyan mt-1">Об инженерной честности, отказоустойчивости и resilience</p>
+                </div>
+              </div>
+              <i id="faq-icon-5" class="fa-solid fa-chevron-down text-slate-400 mt-2 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-5" class="hidden px-5 pb-6 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-goulash-border/60 pt-4 bg-[#07090D]/50">
+              <p>При пиковой нагрузке один из внешних вебхуков CRM начал дублировать события, из-за чего сервис отправлял клиентам повторные сообщения. Я быстро перехватил инцидент, внедрил <strong>Idempotency Keys</strong> на уровне Redis/SQLite и добавил Dead-Letter Queue для всех асинхронных задач. С тех пор в любом моем пайплайне обязательны: защита от дублей, rate-limiting и автоматические алерты о сбоях в Telegram.</p>
+            </div>
+          </div>
+
+          <!-- Вопрос 6 -->
+          <div class="bg-goulash-surface rounded-2xl border border-goulash-border overflow-hidden transition-all duration-200 hover:border-goulash-cyan/50">
+            <button type="button" onclick="toggleFaq(6)" class="w-full p-5 sm:p-6 text-left flex items-start justify-between gap-4 focus:outline-none">
+              <div class="flex items-start gap-3.5">
+                <span class="w-8 h-8 rounded-lg bg-goulash-cyan/10 border border-goulash-cyan/30 text-goulash-cyan font-bold text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+                  06
+                </span>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
+                    «Почему именно Goulash.Tech и FoodTech-экосистема, а не очередной FinTech или крипто-стартап?»
+                  </h3>
+                  <p class="text-xs text-goulash-cyan mt-1">О мотивации, ценностях и желании приносить реальную пользу людям</p>
+                </div>
+              </div>
+              <i id="faq-icon-6" class="fa-solid fa-chevron-down text-slate-400 mt-2 transition-transform duration-200"></i>
+            </button>
+            <div id="faq-content-6" class="hidden px-5 pb-6 sm:px-6 sm:pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-goulash-border/60 pt-4 bg-[#07090D]/50">
+              <p>Мне важно видеть осязаемый результат своего труда. В FoodTech и ритейле твой софт помогает реальным поварам быстрее собирать заказы, курьерам не путать адреса, а миллионам гостей получать свежую пиццу и продукты без задержек. В Goulash.Tech сошлись мои ценности: инженерная свобода, умная прикладная автоматизация и прямой доступ к бизнесу.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. REALIZED PROJECTS & CASES (CLEAN, SOPHISTICATED DARK CARDS) -->
+    <section id="projects" class="py-16 sm:py-24 bg-[#0E1219] border-b border-goulash-border relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Heading -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-goulash-surface text-goulash-cyan text-xs font-bold uppercase tracking-wider mb-3 border border-slate-700">
+            <i class="fa-solid fa-code-branch"></i>
+            <span>Архитектура &amp; Реализованные системы</span>
+          </div>
+          <h2 id="portfolio-title" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            Реализованные проекты и инженерный опыт
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-3 max-w-xl mx-auto leading-relaxed">
+            Каждое решение построено под конкретные бизнес-метрики: устранение рутины, сокращение списаний, сквозной учет в МойСклад/CRM и рост выручки.
+          </p>
+        </div>
+
+        <!-- 2-COLUMN CSS GRID FOR ALL 10 DISTINCT PROJECT CARDS -->
+        <div id="cases-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          <!-- КЕЙС 1: ИИ-скоринг и фильтрация лидов с фриланс-бирж -->
+          <div id="case-card-1" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    01
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">B2B &amp; Парсинг потоков</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-robot text-[10px]"></i> AI-Scoring
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 1: ИИ-скоринг и фильтрация лидов с фриланс-бирж
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Избавить бизнес от ручного разбора мусорных откликов на биржах (Profi.ru, Kwork) и получать только квалифицированные заявки в едином окне.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Разработан бот для парсинга и ИИ-анализа заявок. Настроены промпты для жесткого отбора по критериям ЦА, автоматизирован процесс погружения и генерации релевантных откликов.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  За последний месяц через этот канал закрыто 5 сделок на высокий чек.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 2: Telegram-Аналитик (Автоматический поиск B2B-лидов) -->
+          <div id="case-card-2" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    02
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Telegram &amp; B2B Поиск</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-brands fa-telegram text-[11px]"></i> Live Bot
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 2: Telegram-Аналитик (Автоматический поиск B2B-лидов)
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Поиск и квалификация потенциальных клиентов внутри тематических Telegram-чатов без ручного мониторинга.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Создан парсер и ИИ-фильтр, который в реальном времени мониторит добавленные чаты, анализирует контекст сообщений и отбирает только целевые запросы для аутрича.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  За 7 дней проанализировано 2 227 сообщений, выявлено 46 целевых лидов (конверсия в целевой лид — 2%).
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex items-center justify-between">
+                <a href="https://t.me/THREDS_LEADSbot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-brands fa-telegram text-goulash-cyan"></i>
+                  <span>Открыть @THREDS_LEADSbot</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 3: Автоматизированная аутрич-воронка (Холодный Outreach) -->
+          <div id="case-card-3" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    03
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Outreach &amp; Smart Cadence</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-paper-plane text-[10px]"></i> Live App
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 3: Автоматизированная аутрич-воронка (Холодный Outreach)
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Запуск массовых персонализированных рассылок по базе потенциальных клиентов с подключением человека только на этапе "теплого" диалога.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Настроена система загрузки баз и генерации уникальных сообщений с офферами под каждого лида. Полная автоматизация первого касания и фоллоу-апов.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Отправлено 400 сообщений, конверсия в ответ составила ~7%. За 2 недели работы автоматики закрыто 2 новых клиента.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex items-center justify-between">
+                <a href="https://sratfit-18sh.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-goulash-cyan"></i>
+                  <span>Открыть сервис воронки</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 4: ИИ-архитектор базы знаний (Telegram to Notion) -->
+          <div id="case-card-4" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    04
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Voice &amp; Notion Graph</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-sitemap text-[10px]"></i> Knowledge Graph
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 4: ИИ-архитектор базы знаний (Telegram to Notion)
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Структурировать хаос в рабочих чатах и не терять важную информацию из голосовых сообщений команды.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Разработан бот, который транскрибирует и анализирует голосовые сообщения в Telegram-группе, после чего автоматически формирует и связывает данные в единый Граф Знаний внутри Notion.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Создана огромная, самообновляемая корпоративная база знаний с быстрым контекстным поиском.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex flex-wrap items-center justify-between gap-2">
+                <a href="https://t.me/GOLOASOVOE_pasha_roma_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-brands fa-telegram text-goulash-cyan"></i>
+                  <span>@GOLOASOVOE_bot</span>
+                </a>
+                <button type="button" onclick="openCase4ImageModal()" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-surface hover:bg-goulash-card border border-slate-700 rounded-lg transition-all">
+                  <i class="fa-solid fa-diagram-project text-goulash-cyan"></i>
+                  <span>Смотреть граф связей</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 5: Омниканальная фабрика органического контента -->
+          <div id="case-card-5" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    05
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Content &amp; Дизайн-система</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i> Omnichannel
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 5: Омниканальная фабрика органического контента
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Масштабировать органический контент-маркетинг без раздувания штата копирайтеров и SMM.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Спроектирован граф знаний и ИИ-система для генерации адаптированного контента под Threads, Instagram и TikTok. Внедрена генерация коммерческих предложений на основе дизайн-системы с прозрачным ценообразованием.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Полностью закрыта потребность бизнеса в системном органическом контенте и в разы ускорена сборка КП.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 6: ИИ-РОП (Автоматический контроль качества в Битрикс24) -->
+          <div id="case-card-6" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    06
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Speech Analytics &amp; Битрикс24</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-microphone-lines text-[10px]"></i> Yandex SpeechKit
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 6: ИИ-РОП (Автоматический контроль качества в Битрикс24)
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Прослушивать и оценивать звонки менеджеров в CRM Битрикс24 для контроля скриптов и отработки возражений без ручного аудита.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Интеграция с телефонией (Novofon) и Битрикс24. Настроен вебхук на завершение звонка, транскрибация через Yandex SpeechKit и скоринг через LLM по чек-листу с записью оценки в сделку CRM.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Экономия ~30% времени РОПа на ручном прослушивании, моментальный сигнал о грубых нарушениях скрипта.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex items-center justify-between">
+                <button type="button" onclick="openCase6ImageModal()" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-solid fa-chart-pie text-goulash-cyan"></i>
+                  <span>Смотреть схему и скоринг</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 7: Интеллектуальный бот-квалификатор и генератор офферов -->
+          <div id="case-card-7" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    07
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Диагностика &amp; Квалификация</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-filter text-[10px]"></i> Live Bot
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 7: Интеллектуальный бот-квалификатор и генератор офферов
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Вовлечение холодной аудитории и автоматическая квалификация лидов перед передачей менеджеру по продажам.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Разработан интерактивный Telegram-бот с ветвящейся логикой диагностики, оценкой текущего уровня автоматизации бизнеса и динамической выдачей персонального оффера.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Высокая доходимость до конца опросника, менеджер получает готовый портрет клиента с болями, бюджетом и ключевыми задачами.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex items-center justify-between">
+                <a href="https://t.me/romb_diagnostic_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-brands fa-telegram text-goulash-cyan"></i>
+                  <span>Открыть @romb_diagnostic_bot</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 8: Sims Work & Cat Tracker (Full-stack веб-трекер задач) -->
+          <div id="case-card-8" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    08
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">Full-Stack &amp; База Данных</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-server text-[10px]"></i> Live Web App
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 8: Sims Work &amp; Cat Tracker (Веб-трекер задач и продуктивности)
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Создать удобный совместный веб-инструмент для трекинга задач супруги и рабочих спринтов с системой авторизации и наглядным статусом.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Полнофункциональный веб-сервис на React с подключенной базой данных, системой авторизации (Admin / User) для двух пользователей и панелью управления задачами.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Стабильный рабочий инструмент ежедневного планирования, синхронизации и контроля выполнения задач.
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex items-center justify-between">
+                <a href="https://sims-work-cat-tracker.ai.studio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-goulash-cyan"></i>
+                  <span>Открыть сервис трекера</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 9: Семантический кластеризатор поисковой аналитики и спроса -->
+          <div id="case-card-9" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    09
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">NLP &amp; Семантическая кластеризация</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-diagram-project text-[10px]"></i> Vector Cluster
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 9: Семантический кластеризатор поисковой аналитики и трендов
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Группировка десятков тысяч неструктурированных поисковых запросов и отзывов для поиска скрытых продуктовых трендов и потребительского спроса.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Решение и Инструменты:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Python-пайплайн с TF-IDF + векторными эмбеддингами, выявляющий смысловые ядра запросов и популярные сезонные предпочтения аудитории.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат:</span>
+                </div>
+                <p class="text-sm sm:text-base font-bold text-emerald-300">
+                  Кластеризация 50 000+ запросов за 3 минуты, точное прогнозирование ввода новинок и оптимизация контент-стратегии.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- КЕЙС 10: МойСклад ERP Дашборд и Аналитика остатков -->
+          <div id="case-card-10" class="bg-goulash-surface rounded-2xl border border-goulash-border shadow-lg hover:border-goulash-cyan/50 transition-all duration-200 p-6 md:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between gap-3 pb-4 mb-5 border-b border-goulash-border">
+                <div class="flex items-center gap-2.5">
+                  <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-goulash-cyan text-black font-extrabold text-xs">
+                    10
+                  </span>
+                  <span class="text-xs font-bold text-goulash-cyan uppercase tracking-wide">ERP, Склад &amp; ABC-анализ</span>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-goulash-cyan/10 text-goulash-cyan border border-goulash-cyan/30">
+                  <i class="fa-solid fa-database text-[10px]"></i> МойСклад API
+                </span>
+              </div>
+
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-goulash-cyan transition-colors leading-snug">
+                Кейс 10: Локальное приложение и аналитический дашборд ERP МойСклад
+              </h3>
+
+              <div class="mt-6 space-y-5">
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center text-xs flex-shrink-0 border border-red-500/30">
+                    <i class="fa-solid fa-bullseye"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Задача:</h4>
+                    <p class="text-sm text-slate-300 mt-1 leading-relaxed">
+                      Автоматически забирать данные о продажах, заказах, возвратах, товарах и остатках из МойСклад, рассчитывать аналитику и выдавать её через Telegram-бота и наглядный дашборд.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="mt-0.5 w-7 h-7 rounded-lg bg-goulash-cyan/10 text-goulash-cyan flex items-center justify-center text-xs flex-shrink-0 border border-goulash-cyan/30">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Что умеет и как устроено:</h4>
+                    <ul class="text-xs text-slate-300 mt-1.5 space-y-1.5 list-disc list-inside">
+                      <li>Считать выручку, средний чек и количество продаж</li>
+                      <li>Показывать, сколько продано золота и серебра; строить топ товаров</li>
+                      <li>Отслеживать критические остатки и сравнивать периоды</li>
+                      <li>Отправлять регулярные отчеты в Telegram и делать AI-сводку по обезличенным данным</li>
+                      <li>Хранить аналитику локально в SQLite (Read-Only подключение МойСклад)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-5 border-t border-goulash-border">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-white shadow-xs">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>Результат и Запуск:</span>
+                </div>
+                <p class="text-xs sm:text-sm font-bold text-emerald-300">
+                  Сокращение кассовых разрывов на 40%, выручка по оптимизированным группам выросла на 167%. Запуск: <code class="text-white bg-black/40 px-1 py-0.5 rounded font-mono">python -m app.main</code> (бот), <code class="text-white bg-black/40 px-1 py-0.5 rounded font-mono">python -m app.dashboard</code> (дашборд).
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-goulash-border flex flex-wrap items-center justify-between gap-2">
+                <a href="https://t.me/anna_maslovscau_sclad_bot" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-cyan/10 hover:bg-goulash-cyan/25 border border-goulash-cyan/30 rounded-lg transition-all">
+                  <i class="fa-brands fa-telegram text-goulash-cyan"></i>
+                  <span>@anna_maslovscau_sclad_bot</span>
+                </a>
+                <button type="button" onclick="openCase10ImageModal()" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-white bg-goulash-surface hover:bg-goulash-card border border-slate-700 rounded-lg transition-all">
+                  <i class="fa-solid fa-table-columns text-goulash-cyan"></i>
+                  <span>Смотреть экраны дашборда</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. CONTACT & READY FOR TEST TASK -->
+    <section id="contact" class="py-16 sm:py-24 bg-[#0B0E14] border-t border-goulash-border relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <div class="w-16 h-16 rounded-2xl bg-goulash-cyan/10 border border-goulash-cyan/40 text-goulash-cyan flex items-center justify-center text-2xl mx-auto mb-6 shadow-neon-cyan animate-reactor">
+          <i class="fa-solid fa-handshake"></i>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          Готов обсудить реальные задачи в <span class="text-goulash-cyan">Goulash.Tech</span>
+        </h2>
+
+        <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+          Буду рад познакомиться с командой, ответить на любые технические вопросы и выполнить тестовое задание на боевых задачах сетей «Сушкоф» или «Жизньмарт».
+        </p>
+
+        <!-- Direct Contact Cards -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto mb-10">
+          <a href="https://t.me/Pokeroho" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 text-base font-extrabold text-black bg-goulash-cyan hover:bg-goulash-cyanDark rounded-xl shadow-neon-cyan hover:shadow-neon-cyan-lg hover:-translate-y-0.5 active:translate-y-0 transition-all">
+            <i class="fa-brands fa-telegram text-xl"></i>
+            <span>Написать в Telegram: @Pokeroho</span>
+          </a>
+        </div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-goulash-surface border border-goulash-border text-xs text-slate-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Отвечаю в течение 15–30 минут • Готов к созвону в Google Meet / Telegram</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-[#07090D] border-t border-goulash-border text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-white font-bold">Роман</span>
+        <span>• AI &amp; Automation Engineer for Goulash.Tech</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://t.me/Pokeroho" target="_blank" rel="noopener noreferrer" class="hover:text-goulash-cyan transition-colors">
+          Telegram: @Pokeroho
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT HANDLERS -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          if (hamburgerIcon) {
+            hamburgerIcon.classList.remove('fa-bars');
+            hamburgerIcon.classList.add('fa-xmark');
+          }
+        } else {
+          mobileMenu.classList.add('hidden');
+          if (hamburgerIcon) {
+            hamburgerIcon.classList.remove('fa-xmark');
+            hamburgerIcon.classList.add('fa-bars');
+          }
+        }
+      });
+
+      // Close menu when clicking links
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          if (hamburgerIcon) {
+            hamburgerIcon.classList.remove('fa-xmark');
+            hamburgerIcon.classList.add('fa-bars');
+          }
+        });
+      });
+    }
+
+    // 2. FAQ / Interview Accordion Toggle
+    function toggleFaq(index) {
+      const content = document.getElementById(`faq-content-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      if (!content) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180', 'text-goulash-cyan');
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180', 'text-goulash-cyan');
+      }
+    }
+
+    // 3. JARVIS Live Demo Simulator Switcher
+    const jarvisDemos = {
+      'waste': {
+        pipeline: 'JARVIS://pipeline/sushkof/waste_detector_v2.1',
+        speed: '0.18s',
+        acc: '99.4%',
+        input: 'Входящий поток: 14 ресторанов «Сушкоф и пицца», смена за 21.09.2026',
+        items: [
+          '<span class="text-goulash-cyan">[АНАЛИЗ ТТК]</span> Норматив расхода лосося: 18.4 г на порцию ролла «Филадельфия Премиум»',
+          '<span class="text-amber-400">[ОТКЛОНЕНИЕ]</span> Точка #4 (ул. 8 Марта): фактический расход 22.8 г (+23.9% к ТТК)',
+          '<span class="text-red-400">[РИСК ВЫРУЧКИ]</span> Потеря маржи: ~34 800 ₽ за 3 смены из-за нарушения калибровки нарезки',
+          '<span class="text-emerald-400">[АВТО-ДЕЙСТВИЕ]</span> Сформирован алерт шеф-повару точки #4 в Telegram с видеоинструкцией нарезки и пересчетом остатков в МойСклад.'
+        ],
+        footer: '// Экономия времени управляющего: 4 часа ручной сверки актов списания.'
+      },
+      'procure': {
+        pipeline: 'JARVIS://pipeline/zhiznmart/auto_procurement_v3.4',
+        speed: '0.24s',
+        acc: '99.8%',
+        input: 'Входящий поток: 32 точки «Жизньмарт», прогноз спроса на субботу-воскресенье',
+        items: [
+          '<span class="text-goulash-cyan">[ПРОГНОЗ СПРОСА]</span> Учтены факторы: погода +24°C (рост спроса на готовые напитки +42%), выходной день',
+          '<span class="text-amber-400">[ОСТАТКИ СКЛАДА]</span> Запасы сэндвичей и салатов на 5 точках исчерпаются к 14:30 субботы',
+          '<span class="text-emerald-400">[АВТО-ЗАКАЗ]</span> Сформированы накладные поставщику "ФрешФуд" на 1 240 единиц с тайм-слотом доставки до 08:00',
+          '<span class="text-emerald-400">[РЕЗУЛЬТАТ]</span> Нулевой out-of-stock на полках в пиковые часы выходных.'
+        ],
+        footer: '// Предотвращено ~180 000 ₽ упущенной выручки по сети за уикенд.'
+      },
+      'reviews': {
+        pipeline: 'JARVIS://pipeline/resttech/nps_sentiment_analyzer',
+        speed: '0.12s',
+        acc: '98.9%',
+        input: 'Входящий поток: 840 отзывов из Яндекс.Карт, 2ГИС и приложения доставки',
+        items: [
+          '<span class="text-goulash-cyan">[КЛАССИФИКАЦИЯ]</span> 91% позитив/нейтрал. Выявлен кластер из 14 жалоб на "холодную пиццу" в филиале Юго-Западный',
+          '<span class="text-amber-400">[КОРРЕЛЯЦИЯ]</span> Время ожидания курьера на кухне выросло с 4 до 19 минут из-за перегрузки печи #2',
+          '<span class="text-emerald-400">[АВТО-ДЕЙСТВИЕ]</span> Временный перенос радиуса доставки на смежный филиал и вызов сервисного инженера печей.'
+        ],
+        footer: '// Сохранение NPS района на уровне 4.8/5.0 без ручного чтения тысяч отзывов.'
+      },
+      'summary': {
+        pipeline: 'JARVIS://pipeline/founder/morning_briefing_bot',
+        speed: '0.09s',
+        acc: '100%',
+        input: 'Сводка за сутки для основателя и операционного директора сети',
+        items: [
+          '<span class="text-goulash-cyan">[ВЫРУЧКА СЕТИ]</span> 4 820 000 ₽ (+12.4% к плану)',
+          '<span class="text-goulash-cyan">[СПИСАНИЯ]</span> 1.4% от товарооборота (в пределах нормы &lt; 1.8%)',
+          '<span class="text-goulash-cyan">[ТОП-ТОЧКА ДНЯ]</span> «Сушкоф» на Ленина: рекорд 1 120 заказов со средним временем отдачи 14 мин 20 сек',
+          '<span class="text-emerald-400">[СТАТУС ИНФРАСТРУКТУРЫ]</span> Все кассы, серверы и интеграции МойСклад/POS работали с аптаймом 99.99%.'
+        ],
+        footer: '// Готовый брифинг отправлен в Telegram фаундеру ровно в 08:00 утра.'
+      }
+    };
+
+    function switchJarvisDemo(key) {
+      const demo = jarvisDemos[key];
+      if (!demo) return;
+
+      const container = document.getElementById('jarvis-output-container');
+      if (!container) return;
+
+      const keys = ['waste', 'procure', 'reviews', 'summary'];
+      keys.forEach(k => {
+        const btn = document.getElementById(`jarvis-btn-${k}`);
+        if (btn) {
+          if (k === key) {
+            btn.className = 'px-3 py-1.5 text-xs font-bold rounded-lg bg-goulash-cyan text-black shadow-neon-cyan-sm transition-all whitespace-nowrap';
+          } else {
+            btn.className = 'px-3 py-1.5 text-xs font-bold rounded-lg bg-transparent text-slate-300 hover:text-white transition-all whitespace-nowrap';
+          }
+        }
+      });
+
+      let itemsHtml = demo.items.map(it => `<p>${it}</p>`).join('');
+
+      container.innerHTML = `
+        <div class="flex items-center justify-between text-xs text-slate-500 pb-3 mb-3 border-b border-goulash-border">
+          <span class="text-goulash-cyan font-bold">${demo.pipeline}</span>
+          <span class="text-emerald-400">● EXECUTION TIME: ${demo.speed} • ACCURACY: ${demo.acc}</span>
+        </div>
+        <p class="text-emerald-400 mb-2 font-bold">&gt; ${demo.input}</p>
+        <div class="p-3.5 rounded-lg bg-goulash-surface/80 border border-goulash-border mb-3 space-y-1 text-slate-200">
+          ${itemsHtml}
+        </div>
+        <p class="text-slate-400 text-xs">${demo.footer}</p>
+      `;
+    }
+
+    // 4. Modal Handlers for Cases 4, 6 & 10
+    function openCase4ImageModal() {
+      const modal = document.getElementById('case4-image-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeCase4ImageModal() {
+      const modal = document.getElementById('case4-image-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function openCase6ImageModal() {
+      const modal = document.getElementById('case6-image-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeCase6ImageModal() {
+      const modal = document.getElementById('case6-image-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    function openCase10ImageModal() {
+      const modal = document.getElementById('case10-image-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeCase10ImageModal() {
+      const modal = document.getElementById('case10-image-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCase4ImageModal();
+        closeCase6ImageModal();
+        closeCase10ImageModal();
+      }
+    });
+  </script>
+
+  <!-- MODAL FOR CASE 4 NOTION GRAPH -->
+  <div id="case4-image-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-[#07090D]/90 backdrop-blur-md transition-opacity" onclick="if(event.target === this) closeCase4ImageModal()">
+    <div class="relative max-w-5xl w-full bg-goulash-surface rounded-2xl shadow-2xl overflow-hidden border border-goulash-borderCyan flex flex-col max-h-[92vh]">
+      <div class="flex items-center justify-between px-5 py-3.5 border-b border-goulash-border bg-[#07090D] flex-shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-goulash-cyan animate-pulse"></span>
+          <div>
+            <h4 class="text-sm font-bold text-white">
+              Кейс 4: Автоматизация графа знаний из голосовых (Telegram + Notion AI)
+            </h4>
+            <p class="text-[11px] text-slate-400">Транскрибация аудио, структурирование фактов и построение связного графа данных</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeCase4ImageModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-goulash-card transition-colors">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <div class="p-3 sm:p-5 overflow-auto bg-[#07090D]/50 flex items-center justify-center">
+        <img 
+          src="/case4-notion-graph.svg" 
+          alt="Схема связного графа знаний Notion" 
+          class="w-full h-auto rounded-xl shadow-md border border-goulash-border" 
+          referrerpolicy="no-referrer"
+        />
+      </div>
+
+      <div class="px-5 py-3 border-t border-goulash-border bg-[#07090D] flex items-center justify-between text-xs text-slate-400 flex-shrink-0">
+        <span class="text-goulash-cyan">Автоматическое обогащение корпоративной базы знаний</span>
+        <button type="button" onclick="closeCase4ImageModal()" class="px-4 py-1.5 font-bold text-white bg-goulash-card hover:bg-goulash-cardHover rounded-lg transition-colors border border-goulash-border">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL FOR CASE 6 SCREENSHOT -->
+  <div id="case6-image-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-[#07090D]/90 backdrop-blur-md transition-opacity" onclick="if(event.target === this) closeCase6ImageModal()">
+    <div class="relative max-w-5xl w-full bg-goulash-surface rounded-2xl shadow-2xl overflow-hidden border border-goulash-borderCyan flex flex-col max-h-[92vh]">
+      <div class="flex items-center justify-between px-5 py-3.5 border-b border-goulash-border bg-[#07090D] flex-shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-goulash-cyan animate-pulse"></span>
+          <div>
+            <h4 class="text-sm font-bold text-white">
+              Кейс 6: Архитектура ИИ-РОП и Речевой аналитики (Битрикс24 + Yandex SpeechKit)
+            </h4>
+            <p class="text-[11px] text-slate-400">Автоматическая расшифровка звонков, скоринг скрипта и запись оценки в CRM</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeCase6ImageModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-goulash-card transition-colors">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <div class="p-3 sm:p-5 overflow-auto bg-[#07090D]/50 flex items-center justify-center">
+        <img 
+          src="/case6-bitrix-rop.svg" 
+          alt="Интерфейс дашборда контроля качества звонков ИИ-РОП" 
+          class="w-full h-auto rounded-xl shadow-md border border-goulash-border" 
+          referrerpolicy="no-referrer"
+        />
+      </div>
+
+      <div class="px-5 py-3 border-t border-goulash-border bg-[#07090D] flex items-center justify-between text-xs text-slate-400 flex-shrink-0">
+        <span class="text-goulash-cyan">100% покрытие звонков без участия человека</span>
+        <button type="button" onclick="closeCase6ImageModal()" class="px-4 py-1.5 font-bold text-white bg-goulash-card hover:bg-goulash-cardHover rounded-lg transition-colors border border-goulash-border">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL FOR CASE 10 MOYSKLAD ERP DASHBOARD -->
+  <div id="case10-image-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6 bg-[#07090D]/90 backdrop-blur-md transition-opacity" onclick="if(event.target === this) closeCase10ImageModal()">
+    <div class="relative max-w-6xl w-full bg-goulash-surface rounded-2xl shadow-2xl overflow-hidden border border-goulash-borderCyan flex flex-col max-h-[92vh]">
+      <div class="flex items-center justify-between px-5 py-3.5 border-b border-goulash-border bg-[#07090D] flex-shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-goulash-cyan animate-pulse"></span>
+          <div>
+            <h4 class="text-sm font-bold text-white">
+              Кейс 10: Аналитический дашборд МойСклад (Остатки, Спрос, ABC-анализ)
+            </h4>
+            <p class="text-[11px] text-slate-400">Синхронизация через REST API, локальный SQLite и Telegram-бот</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeCase10ImageModal()" class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-goulash-card transition-colors">
+          <i class="fa-solid fa-xmark text-base"></i>
+        </button>
+      </div>
+
+      <div class="p-3 sm:p-5 overflow-auto bg-[#07090D]/50 flex items-center justify-center">
+        <img 
+          src="/case10-moysklad-dashboard-main.svg" 
+          alt="Интерфейс аналитического дашборда МойСклад" 
+          class="w-full h-auto rounded-xl shadow-md border border-goulash-border" 
+          referrerpolicy="no-referrer"
+        />
+      </div>
+
+      <div class="px-5 py-3 border-t border-goulash-border bg-[#07090D] flex items-center justify-between text-xs text-slate-400 flex-shrink-0">
+        <span class="text-goulash-cyan">Read-Only режим API МойСклад. Безопасность и отказоустойчивость.</span>
+        <button type="button" onclick="closeCase10ImageModal()" class="px-4 py-1.5 font-bold text-white bg-goulash-card hover:bg-goulash-cardHover rounded-lg transition-colors border border-goulash-border">
+          Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

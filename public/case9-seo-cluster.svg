@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-3%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base Container -->
+  <rect x="0" y="0" width="1100" height="680" fill="#f8fafc" rx="14"/>
+
+  <!-- App Header Bar -->
+  <rect x="0" y="0" width="1100" height="56" fill="url(#headerGrad)" rx="14 14 0 0"/>
+  <circle cx="28" cy="28" r="6" fill="#ef4444"/>
+  <circle cx="48" cy="28" r="6" fill="#f59e0b"/>
+  <circle cx="68" cy="28" r="6" fill="#10b981"/>
+
+  <text x="96" y="33" fill="#ffffff" font-size="14" font-weight="700" letter-spacing="0.3">FourIT AI-SEO Suite — Кластеризация запросов по Яндекс.Вебмастер API</text>
+  <rect x="800" y="16" width="140" height="24" rx="12" fill="#334155"/>
+  <circle cx="814" cy="28" r="4" fill="#22c55e"/>
+  <text x="825" y="32" fill="#e2e8f0" font-size="11" font-weight="600">API подключен</text>
+  <rect x="952" y="16" width="130" height="24" rx="12" fill="#2563eb"/>
+  <text x="968" y="32" fill="#ffffff" font-size="11" font-weight="700">142 темы в пуле</text>
+
+  <!-- Subheader Toolbar -->
+  <rect x="0" y="56" width="1100" height="42" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="24" y="82" fill="#475569" font-size="12" font-weight="600">Проект: Строительство &amp; CRM (Битрикс24 / 1C / ERP)</text>
+  <text x="520" y="82" fill="#64748b" font-size="12">Период выгрузки: 2026-09-15</text>
+  <text x="820" y="82" fill="#0284c7" font-size="12" font-weight="600">Архитектор: В ожидании утверждения статей</text>
+
+  <!-- Spreadsheet Table Container -->
+  <g transform="translate(16, 108)" filter="url(#shadow)">
+    <!-- Table Box -->
+    <rect x="0" y="0" width="1068" height="540" fill="#ffffff" rx="8" stroke="#cbd5e1" stroke-width="1"/>
+
+    <!-- Table Header -->
+    <rect x="0" y="0" width="1068" height="36" fill="#e2e8f0" rx="8 8 0 0"/>
+    <line x1="0" y1="36" x2="1068" y2="36" stroke="#cbd5e1" stroke-width="1"/>
+
+    <!-- Column Headers -->
+    <text x="14" y="23" fill="#334155" font-size="11" font-weight="700">ДАТА</text>
+    <line x1="95" y1="0" x2="95" y2="36" stroke="#cbd5e1"/>
+
+    <text x="108" y="23" fill="#334155" font-size="11" font-weight="700">ПОИСКОВЫЙ КЛАСТЕР (API ВЕБМАСТЕРА)</text>
+    <line x1="480" y1="0" x2="480" y2="36" stroke="#cbd5e1"/>
+
+    <text x="492" y="23" fill="#334155" font-size="11" font-weight="700">КАТЕГОРИЯ СИСТЕМЫ</text>
+    <line x1="680" y1="0" x2="680" y2="36" stroke="#cbd5e1"/>
+
+    <text x="692" y="23" fill="#334155" font-size="11" font-weight="700">ТИП ИНТЕНТА</text>
+    <line x1="790" y1="0" x2="790" y2="36" stroke="#cbd5e1"/>
+
+    <text x="802" y="23" fill="#334155" font-size="11" font-weight="700">КОНКУРЕНЦИЯ</text>
+    <line x1="900" y1="0" x2="900" y2="36" stroke="#cbd5e1"/>
+
+    <text x="912" y="23" fill="#334155" font-size="11" font-weight="700">СТАТУС ИИ-ГЕНЕРАЦИИ</text>
+
+    <!-- ROW 1 -->
+    <rect x="0" y="36" width="1068" height="34" fill="#ffffff"/>
+    <text x="14" y="58" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="58" fill="#0f172a" font-size="11" font-weight="600">управленческий учет нехватка денег ERP-BI</text>
+    <rect x="490" y="44" width="120" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="57" fill="#1d4ed8" font-size="10" font-weight="600">финансы/ДДС</text>
+    <text x="694" y="58" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="58" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="44" width="60" height="18" rx="4" fill="#dcfce7"/>
+    <text x="918" y="57" fill="#166534" font-size="10" font-weight="700">new</text>
+    <line x1="0" y1="70" x2="1068" y2="70" stroke="#f1f5f9"/>
+
+    <!-- ROW 2 -->
+    <rect x="0" y="70" width="1068" height="34" fill="#f8fafc"/>
+    <text x="14" y="92" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="92" fill="#0f172a" font-size="11" font-weight="600">план-факт по марже проекта ERP-BI</text>
+    <rect x="490" y="78" width="120" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="91" fill="#1d4ed8" font-size="10" font-weight="600">финансы/маржа</text>
+    <text x="694" y="92" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="92" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="78" width="60" height="18" rx="4" fill="#dcfce7"/>
+    <text x="918" y="91" fill="#166534" font-size="10" font-weight="700">new</text>
+    <line x1="0" y1="104" x2="1068" y2="104" stroke="#f1f5f9"/>
+
+    <!-- ROW 3 -->
+    <rect x="0" y="104" width="1068" height="34" fill="#ffffff"/>
+    <text x="14" y="126" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="126" fill="#0f172a" font-size="11" font-weight="600">контроль дебиторки отгрузки идут, а денег нет ERP-BI</text>
+    <rect x="490" y="112" width="140" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="125" fill="#1d4ed8" font-size="10" font-weight="600">финансы/дебиторка</text>
+    <text x="694" y="126" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="126" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="112" width="60" height="18" rx="4" fill="#dcfce7"/>
+    <text x="918" y="125" fill="#166534" font-size="10" font-weight="700">new</text>
+    <line x1="0" y1="138" x2="1068" y2="138" stroke="#f1f5f9"/>
+
+    <!-- ROW 4 -->
+    <rect x="0" y="138" width="1068" height="34" fill="#f8fafc"/>
+    <text x="14" y="160" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="160" fill="#0f172a" font-size="11" font-weight="600">управленческий учет дашборд собственник смотрит ERP-BI</text>
+    <rect x="490" y="146" width="160" height="18" rx="4" fill="#fef3c7"/>
+    <text x="498" y="159" fill="#b45309" font-size="10" font-weight="600">финансы/управленческий</text>
+    <text x="694" y="160" fill="#0284c7" font-size="11" font-weight="600">informational</text>
+    <text x="804" y="160" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="146" width="60" height="18" rx="4" fill="#dcfce7"/>
+    <text x="918" y="159" fill="#166534" font-size="10" font-weight="700">new</text>
+    <line x1="0" y1="172" x2="1068" y2="172" stroke="#f1f5f9"/>
+
+    <!-- ROW 5 (KEY TOPIC 1 - BITRIX24 STROITELSTVO) -->
+    <rect x="0" y="172" width="1068" height="34" fill="#f0fdf4"/>
+    <text x="14" y="194" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="194" fill="#15803d" font-size="11" font-weight="700">сквозная заявка строительная замер смета Битрикс24</text>
+    <rect x="490" y="180" width="80" height="18" rx="4" fill="#dcfce7"/>
+    <text x="498" y="193" fill="#15803d" font-size="10" font-weight="700">продажи</text>
+    <text x="694" y="194" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="194" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="180" width="140" height="18" rx="4" fill="#2563eb"/>
+    <text x="918" y="193" fill="#ffffff" font-size="10" font-weight="700">✓ Article.html сгенерирован</text>
+    <line x1="0" y1="206" x2="1068" y2="206" stroke="#bbf7d0"/>
+
+    <!-- ROW 6 (KEY TOPIC 2 - LOSS OF LEADS SALES DEPT) -->
+    <rect x="0" y="206" width="1068" height="34" fill="#f0fdf4"/>
+    <text x="14" y="228" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="228" fill="#15803d" font-size="11" font-weight="700">проверьте отдел продаж строительная теряете заявки Битрикс24</text>
+    <rect x="490" y="214" width="130" height="18" rx="4" fill="#dcfce7"/>
+    <text x="498" y="227" fill="#15803d" font-size="10" font-weight="700">продажи/заявки</text>
+    <text x="694" y="228" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="228" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="214" width="140" height="18" rx="4" fill="#2563eb"/>
+    <text x="918" y="227" fill="#ffffff" font-size="10" font-weight="700">✓ Article.html сгенерирован</text>
+    <line x1="0" y1="240" x2="1068" y2="240" stroke="#bbf7d0"/>
+
+    <!-- ROW 7 -->
+    <rect x="0" y="240" width="1068" height="34" fill="#ffffff"/>
+    <text x="14" y="262" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="262" fill="#0f172a" font-size="11" font-weight="600">расчет точной себестоимости материалов и работ 1С</text>
+    <rect x="490" y="248" width="110" height="18" rx="4" fill="#f1f5f9"/>
+    <text x="498" y="261" fill="#475569" font-size="10" font-weight="600">себестоимость</text>
+    <text x="694" y="262" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="262" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="248" width="70" height="18" rx="4" fill="#fef08a"/>
+    <text x="918" y="261" fill="#854d0e" font-size="10" font-weight="700">2 new</text>
+    <line x1="0" y1="274" x2="1068" y2="274" stroke="#f1f5f9"/>
+
+    <!-- ROW 8 -->
+    <rect x="0" y="274" width="1068" height="34" fill="#f8fafc"/>
+    <text x="14" y="296" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="296" fill="#0f172a" font-size="11" font-weight="600">интеграция склада и складских остатков с Битрикс24</text>
+    <rect x="490" y="282" width="100" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="295" fill="#1d4ed8" font-size="10" font-weight="600">интеграция</text>
+    <text x="694" y="296" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="296" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="282" width="70" height="18" rx="4" fill="#fef08a"/>
+    <text x="918" y="295" fill="#854d0e" font-size="10" font-weight="700">3 new</text>
+    <line x1="0" y1="308" x2="1068" y2="308" stroke="#f1f5f9"/>
+
+    <!-- ROW 9 -->
+    <rect x="0" y="308" width="1068" height="34" fill="#ffffff"/>
+    <text x="14" y="330" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="330" fill="#0f172a" font-size="11" font-weight="600">сквозная аналитика окупаемость рекламы воронка Битрикс24</text>
+    <rect x="490" y="316" width="170" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="329" fill="#1d4ed8" font-size="10" font-weight="600">интеграция/сквозная</text>
+    <text x="694" y="330" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="330" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="316" width="70" height="18" rx="4" fill="#fef08a"/>
+    <text x="918" y="329" fill="#854d0e" font-size="10" font-weight="700">9 new</text>
+    <line x1="0" y1="342" x2="1068" y2="342" stroke="#f1f5f9"/>
+
+    <!-- ROW 10 -->
+    <rect x="0" y="342" width="1068" height="34" fill="#f8fafc"/>
+    <text x="14" y="364" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="364" fill="#0f172a" font-size="11" font-weight="600">воронка продаж строительная компания как не слить лиды Битрикс24</text>
+    <rect x="490" y="350" width="140" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="363" fill="#1d4ed8" font-size="10" font-weight="600">продажи/воронка</text>
+    <text x="694" y="364" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="364" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="350" width="70" height="18" rx="4" fill="#fef08a"/>
+    <text x="918" y="363" fill="#854d0e" font-size="10" font-weight="700">18 new</text>
+    <line x1="0" y1="376" x2="1068" y2="376" stroke="#f1f5f9"/>
+
+    <!-- ROW 11 -->
+    <rect x="0" y="376" width="1068" height="34" fill="#ffffff"/>
+    <text x="14" y="398" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="398" fill="#0f172a" font-size="11" font-weight="600">KPI менеджеров отдела продаж как считать без ошибок Битрикс24</text>
+    <rect x="490" y="384" width="120" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="397" fill="#1d4ed8" font-size="10" font-weight="600">продажи/KPI</text>
+    <text x="694" y="398" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="398" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="384" width="70" height="18" rx="4" fill="#fef08a"/>
+    <text x="918" y="397" fill="#854d0e" font-size="10" font-weight="700">19 new</text>
+    <line x1="0" y1="410" x2="1068" y2="410" stroke="#f1f5f9"/>
+
+    <!-- ROW 12 -->
+    <rect x="0" y="410" width="1068" height="34" fill="#f8fafc"/>
+    <text x="14" y="432" fill="#64748b" font-size="11">2026-09-15</text>
+    <text x="108" y="432" fill="#0f172a" font-size="11" font-weight="600">управление складом резервы под заказы клиентов 1С</text>
+    <rect x="490" y="418" width="130" height="18" rx="4" fill="#eff6ff"/>
+    <text x="498" y="431" fill="#1d4ed8" font-size="10" font-weight="600">склад/резервы</text>
+    <text x="694" y="432" fill="#059669" font-size="11" font-weight="600">commercial</text>
+    <text x="804" y="432" fill="#64748b" font-size="11">none</text>
+    <rect x="910" y="418" width="70" height="18" rx="4" fill="#fef08a"/>
+    <text x="918" y="431" fill="#854d0e" font-size="10" font-weight="700">23 new</text>
+    <line x1="0" y1="444" x2="1068" y2="444" stroke="#f1f5f9"/>
+
+    <!-- AI Architecture Pipeline Flow Footer inside table -->
+    <rect x="0" y="450" width="1068" height="90" fill="#f8fafc" rx="0 0 8 8"/>
+    <rect x="14" y="460" width="1040" height="70" rx="6" fill="#1e293b"/>
+    <text x="32" y="482" fill="#38bdf8" font-size="11" font-weight="700">ПАЙПЛАЙН АВТОМАТИЗАЦИИ FOURIT-SEO:</text>
+    <text x="32" y="508" fill="#f1f5f9" font-size="12">
+      1. API Вебмастера (кластеризация) ➔ 2. База знаний и кейсы ➔ 3. ИИ-Архитектор (редактура &amp; фактчек) ➔ 4. Чистый HTML под Tilda
+    </text>
+  </g>
+</svg>

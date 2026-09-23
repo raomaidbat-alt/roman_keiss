@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goulashCyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="100%" stop-color="#00C8FF"/>
+    </linearGradient>
+    <filter id="cyanGlowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Icon Background Rounded Square -->
+  <rect x="8" y="10" width="60" height="60" rx="14" fill="#00F5FF" filter="url(#cyanGlowEffect)"/>
+  
+  <!-- Pixel Cutout C Shape Inside -->
+  <!-- Top bar -->
+  <rect x="22" y="24" width="32" height="10" rx="2" fill="#0B0E14"/>
+  <!-- Left column -->
+  <rect x="22" y="24" width="12" height="32" rx="2" fill="#0B0E14"/>
+  <!-- Bottom bar -->
+  <rect x="22" y="46" width="32" height="10" rx="2" fill="#0B0E14"/>
+  <!-- Middle pixel dot -->
+  <rect x="42" y="35" width="10" height="10" rx="2" fill="#0B0E14"/>
+  
+  <!-- Text: Goulash.tech -->
+  <text x="82" y="52" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5px">
+    Goulash<tspan fill="#00F5FF">.tech</tspan>
+  </text>
+</svg>

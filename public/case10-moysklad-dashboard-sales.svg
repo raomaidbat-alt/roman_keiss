@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="100%" style="background:#fff0f6; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow-card" x="-2%" y="-2%" width="104%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.04" />
+    </filter>
+    <linearGradient id="chart-area" x1="0" y1="0" x2="0" y2="1">
+      <feStop offset="0%" stop-color="#ec4899" stop-opacity="0.35"/>
+      <feStop offset="100%" stop-color="#ec4899" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="mini-chart-pink" x1="0" y1="0" x2="0" y2="1">
+      <feStop offset="0%" stop-color="#ec4899" stop-opacity="0.4"/>
+      <feStop offset="100%" stop-color="#ec4899" stop-opacity="0.0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top App Header -->
+  <rect x="0" y="0" width="1200" height="70" fill="#ffffff" />
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#fbcfe8" stroke-width="1" />
+  
+  <text x="40" y="42" font-size="22" font-weight="800" fill="#be185d">❤️ Продажи</text>
+  <text x="40" y="58" font-size="11" font-weight="500" fill="#db2777">Динамика и история продаж из МойСклад</text>
+
+  <!-- Time Filter Tabs & Export -->
+  <g transform="translate(40, 85)">
+    <!-- 7 дней -->
+    <rect x="0" y="0" width="80" height="36" rx="18" fill="#ffffff" stroke="#fbcfe8"/>
+    <text x="40" y="23" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">7 дней</text>
+    <!-- 30 дней (Active) -->
+    <rect x="90" y="0" width="90" height="36" rx="18" fill="#e11d48"/>
+    <text x="135" y="23" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">30 дней</text>
+    <!-- 90 дней -->
+    <rect x="190" y="0" width="80" height="36" rx="18" fill="#ffffff" stroke="#fbcfe8"/>
+    <text x="230" y="23" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">90 дней</text>
+    <!-- Весь период -->
+    <rect x="280" y="0" width="110" height="36" rx="18" fill="#ffffff" stroke="#fbcfe8"/>
+    <text x="335" y="23" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">Весь период</text>
+    <!-- Свой -->
+    <rect x="400" y="0" width="70" height="36" rx="18" fill="#ffffff" stroke="#fbcfe8"/>
+    <text x="435" y="23" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle">Свой</text>
+
+    <!-- Export CSV -->
+    <rect x="990" y="0" width="130" height="36" rx="18" fill="#ffffff" stroke="#fbcfe8"/>
+    <text x="1055" y="23" font-size="12" font-weight="700" fill="#e11d48" text-anchor="middle">⤓ Экспорт CSV</text>
+  </g>
+
+  <!-- Big Chart Box: Выручка по дням -->
+  <g transform="translate(40, 135)">
+    <rect x="0" y="0" width="1120" height="320" rx="18" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    
+    <text x="25" y="32" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.5">ВЫРУЧКА ПО ДНЯМ</text>
+    <text x="25" y="52" font-size="14" font-weight="800" fill="#0f172a">19 авг. 2026 г. — 17 сент. 2026 г. • 30 дн.</text>
+
+    <text x="1095" y="35" font-size="12" font-weight="500" fill="#64748b" text-anchor="end">
+      Текущий: <tspan font-weight="800" fill="#0f172a">743 994 ₽</tspan>  |  Прошлый: <tspan font-weight="700" fill="#64748b">58 696 ₽</tspan>  <tspan font-weight="800" fill="#059669">+1167.5%</tspan>
+    </text>
+
+    <!-- Chart Y-axis grid -->
+    <line x1="80" y1="90" x2="1080" y2="90" stroke="#fce7f3" stroke-dasharray="4"/>
+    <text x="65" y="94" font-size="10" font-weight="600" fill="#db2777" text-anchor="end">168 241 ₽</text>
+
+    <line x1="80" y1="140" x2="1080" y2="140" stroke="#fce7f3" stroke-dasharray="4"/>
+    <text x="65" y="144" font-size="10" font-weight="600" fill="#db2777" text-anchor="end">126 181 ₽</text>
+
+    <line x1="80" y1="190" x2="1080" y2="190" stroke="#fce7f3" stroke-dasharray="4"/>
+    <text x="65" y="194" font-size="10" font-weight="600" fill="#db2777" text-anchor="end">84 121 ₽</text>
+
+    <line x1="80" y1="240" x2="1080" y2="240" stroke="#fce7f3" stroke-dasharray="4"/>
+    <text x="65" y="244" font-size="10" font-weight="600" fill="#db2777" text-anchor="end">42 060 ₽</text>
+
+    <line x1="80" y1="280" x2="1080" y2="280" stroke="#fce7f3"/>
+    <text x="65" y="284" font-size="10" font-weight="600" fill="#db2777" text-anchor="end">0 ₽</text>
+
+    <!-- Chart Path -->
+    <path d="M 80 250 L 140 200 L 190 220 L 250 260 L 310 270 L 370 280 L 440 280 L 510 240 L 550 280 L 600 100 L 650 220 L 700 270 L 750 230 L 800 275 L 870 265 L 930 180 L 1020 270 L 1070 280" 
+          fill="none" stroke="#e11d48" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 80 250 L 140 200 L 190 220 L 250 260 L 310 270 L 370 280 L 440 280 L 510 240 L 550 280 L 600 100 L 650 220 L 700 270 L 750 230 L 800 275 L 870 265 L 930 180 L 1020 270 L 1070 280 L 1070 280 L 80 280 Z" 
+          fill="url(#chart-area)" />
+
+    <!-- X-axis Labels -->
+    <text x="80" y="300" font-size="11" font-weight="600" fill="#db2777">19 авг. 2026 г.</text>
+    <text x="320" y="300" font-size="11" font-weight="600" fill="#db2777">26 авг. 2026 г.</text>
+    <text x="560" y="300" font-size="11" font-weight="600" fill="#db2777">01 сент. 2026 г.</text>
+    <text x="800" y="300" font-size="11" font-weight="600" fill="#db2777">10 сент. 2026 г.</text>
+    <text x="1040" y="300" font-size="11" font-weight="600" fill="#db2777">17 сент. 2026 г.</text>
+  </g>
+
+  <!-- Row 2: 4 Summary Metric Cards with Sparklines -->
+  <!-- Card 1: Заказы 45 -->
+  <g transform="translate(40, 470)">
+    <rect x="0" y="0" width="265" height="130" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="20" y="24" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">ЗАКАЗЫ</text>
+    <text x="245" y="24" font-size="11" font-weight="800" fill="#059669" text-anchor="end">+1400.0%</text>
+    <text x="20" y="56" font-size="28" font-weight="900" fill="#0f172a">45</text>
+    <text x="20" y="74" font-size="11" font-weight="500" fill="#64748b">Прошлый период: 3</text>
+    <!-- Sparkline -->
+    <path d="M 20 115 L 70 95 L 110 110 L 150 85 L 180 115 L 210 98 L 245 92" fill="none" stroke="#ec4899" stroke-width="2"/>
+  </g>
+
+  <!-- Card 2: Средний чек 16 533 ₽ -->
+  <g transform="translate(325, 470)">
+    <rect x="0" y="0" width="265" height="130" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="20" y="24" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">СРЕДНИЙ ЧЕК</text>
+    <text x="245" y="24" font-size="11" font-weight="800" fill="#e11d48" text-anchor="end">-15.5%</text>
+    <text x="20" y="56" font-size="24" font-weight="900" fill="#0f172a">16 533 ₽</text>
+    <text x="20" y="74" font-size="11" font-weight="500" fill="#64748b">Прошлый период: 19 565 ₽</text>
+    <!-- Dark Sparkline area -->
+    <path d="M 20 115 L 50 95 L 90 115 L 130 100 L 170 115 L 210 88 L 245 115 L 245 125 L 20 125 Z" fill="#0f172a"/>
+  </g>
+
+  <!-- Card 3: Проданных изделий 98 -->
+  <g transform="translate(610, 470)">
+    <rect x="0" y="0" width="265" height="130" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="20" y="24" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">ПРОДАННЫХ ИЗДЕЛИЙ</text>
+    <text x="245" y="24" font-size="11" font-weight="800" fill="#059669" text-anchor="end">+1860.0%</text>
+    <text x="20" y="56" font-size="28" font-weight="900" fill="#0f172a">98</text>
+    <text x="20" y="74" font-size="11" font-weight="500" fill="#64748b">Прошлый период: 5</text>
+    <!-- Sparkline -->
+    <path d="M 20 115 L 60 90 L 110 118 L 150 75 L 190 115 L 220 100 L 245 115 L 245 125 L 20 125 Z" fill="#0f172a"/>
+  </g>
+
+  <!-- Card 4: Сумма возвратов 11 400 ₽ -->
+  <g transform="translate(895, 470)">
+    <rect x="0" y="0" width="265" height="130" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="20" y="24" font-size="10" font-weight="800" fill="#e11d48" letter-spacing="1.2">СУММА ВОЗВРАТОВ</text>
+    <text x="245" y="24" font-size="11" font-weight="800" fill="#94a3b8" text-anchor="end">—</text>
+    <text x="20" y="56" font-size="24" font-weight="900" fill="#0f172a">11 400 ₽</text>
+    <text x="20" y="74" font-size="11" font-weight="500" fill="#64748b">Прошлый период: 0 ₽</text>
+    <!-- Red spike line -->
+    <path d="M 20 118 L 210 118 L 240 85 L 245 118 L 245 125 L 20 125 Z" fill="#0f172a"/>
+    <line x1="20" y1="118" x2="245" y2="118" stroke="#e11d48" stroke-width="1.5"/>
+  </g>
+
+  <!-- Table: История записей из базы -->
+  <g transform="translate(40, 615)">
+    <rect x="0" y="0" width="1120" height="225" rx="18" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="25" y="30" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">ИСТОРИЯ</text>
+    <text x="25" y="46" font-size="11" font-weight="500" fill="#64748b">Отображаются только фактические записи из базы SQLite.</text>
+    <text x="1095" y="35" font-size="11" font-weight="600" fill="#db2777" text-anchor="end">Сортировка: новые сверху</text>
+
+    <!-- Table Header -->
+    <line x1="25" y1="60" x2="1095" y2="60" stroke="#fce7f3" />
+    <text x="35" y="78" font-size="10" font-weight="800" fill="#ec4899">ДАТА</text>
+    <text x="320" y="78" font-size="10" font-weight="800" fill="#ec4899" text-anchor="end">ВЫРУЧКА</text>
+    <text x="480" y="78" font-size="10" font-weight="800" fill="#ec4899" text-anchor="end">ЗАКАЗЫ</text>
+    <text x="640" y="78" font-size="10" font-weight="800" fill="#ec4899" text-anchor="end">ИЗДЕЛИЯ</text>
+    <text x="820" y="78" font-size="10" font-weight="800" fill="#ec4899" text-anchor="end">СРЕДНИЙ ЧЕК</text>
+    <text x="1080" y="78" font-size="10" font-weight="800" fill="#ec4899" text-anchor="end">ВОЗВРАТЫ</text>
+
+    <!-- Row 1 -->
+    <line x1="25" y1="90" x2="1095" y2="90" stroke="#fff1f2" />
+    <text x="35" y="110" font-size="12" font-weight="700" fill="#0f172a">17 сент. 2026 г.</text>
+    <text x="320" y="110" font-size="13" font-weight="800" fill="#0f172a" text-anchor="end">4 399 ₽</text>
+    <text x="480" y="110" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">3</text>
+    <text x="640" y="110" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">1</text>
+    <text x="820" y="110" font-size="12" font-weight="700" fill="#0f172a" text-anchor="end">1 466 ₽</text>
+    <text x="1080" y="110" font-size="12" font-weight="800" fill="#e11d48" text-anchor="end">11 400 ₽</text>
+
+    <!-- Row 2 -->
+    <line x1="25" y1="125" x2="1095" y2="125" stroke="#fff1f2" />
+    <text x="35" y="145" font-size="12" font-weight="700" fill="#0f172a">16 сент. 2026 г.</text>
+    <text x="320" y="145" font-size="13" font-weight="800" fill="#0f172a" text-anchor="end">52 394 ₽</text>
+    <text x="480" y="145" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">2</text>
+    <text x="640" y="145" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">7</text>
+    <text x="820" y="145" font-size="12" font-weight="700" fill="#0f172a" text-anchor="end">26 197 ₽</text>
+    <text x="1080" y="145" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">0 ₽</text>
+
+    <!-- Row 3 -->
+    <line x1="25" y1="160" x2="1095" y2="160" stroke="#fff1f2" />
+    <text x="35" y="180" font-size="12" font-weight="700" fill="#0f172a">15 сент. 2026 г.</text>
+    <text x="320" y="180" font-size="13" font-weight="800" fill="#0f172a" text-anchor="end">100 008 ₽</text>
+    <text x="480" y="180" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">2</text>
+    <text x="640" y="180" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">5</text>
+    <text x="820" y="180" font-size="12" font-weight="700" fill="#0f172a" text-anchor="end">50 004 ₽</text>
+    <text x="1080" y="180" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">0 ₽</text>
+
+    <!-- Row 4 -->
+    <line x1="25" y1="195" x2="1095" y2="195" stroke="#fff1f2" />
+    <text x="35" y="213" font-size="12" font-weight="700" fill="#0f172a">02 сент. 2026 г. (Пик продаж)</text>
+    <text x="320" y="213" font-size="13" font-weight="800" fill="#0f172a" text-anchor="end">168 241 ₽</text>
+    <text x="480" y="213" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">8</text>
+    <text x="640" y="213" font-size="12" font-weight="600" fill="#0f172a" text-anchor="end">18</text>
+    <text x="820" y="213" font-size="12" font-weight="700" fill="#0f172a" text-anchor="end">21 030 ₽</text>
+    <text x="1080" y="213" font-size="12" font-weight="600" fill="#64748b" text-anchor="end">0 ₽</text>
+  </g>
+</svg>

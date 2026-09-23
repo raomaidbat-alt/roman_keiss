@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" style="background:#f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Container Window -->
+  <rect x="20" y="20" width="1160" height="640" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Window Header Bar -->
+  <path d="M 20 36 Q 20 20 36 20 L 1164 20 Q 1180 20 1180 36 L 1180 72 L 20 72 Z" fill="#f1f5f9"/>
+  <circle cx="48" cy="46" r="6" fill="#ef4444"/>
+  <circle cx="68" cy="46" r="6" fill="#f59e0b"/>
+  <circle cx="88" cy="46" r="6" fill="#10b981"/>
+
+  <text x="115" y="51" font-size="13" font-weight="700" fill="#475569">Журнал звонков и ИИ-контроль качества (Битрикс24 + Yandex SpeechKit)</text>
+
+  <rect x="990" y="34" width="165" height="24" rx="12" fill="#e0f2fe"/>
+  <text x="1005" y="50" font-size="11" font-weight="700" fill="#0284c7">● Интеграция активна</text>
+
+  <!-- Table Header -->
+  <rect x="35" y="85" width="1130" height="34" rx="6" fill="#f8fafc" stroke="#edf2f7"/>
+  <text x="50" y="107" font-size="11" font-weight="700" fill="#64748b">ДАТА И ВРЕМЯ</text>
+  <text x="175" y="107" font-size="11" font-weight="700" fill="#64748b">ТИП ЗВОНКА</text>
+  <text x="275" y="107" font-size="11" font-weight="700" fill="#64748b">СТАТУС / ТЕМА</text>
+  <text x="440" y="107" font-size="11" font-weight="700" fill="#64748b">СОБЕСЕДНИК</text>
+  <text x="540" y="107" font-size="11" font-weight="700" fill="#64748b">ОЦЕНКА ИИ</text>
+  <text x="635" y="107" font-size="11" font-weight="700" fill="#64748b">АНАЛИЗ ДИАЛОГА, ТРАНСКРИПТ И РЕКОМЕНДАЦИИ РОПУ</text>
+
+  <!-- Row 1: Robot IVR (Auto-responder) -->
+  <line x1="35" y1="128" x2="1165" y2="128" stroke="#f1f5f9"/>
+  <text x="50" y="152" font-size="12" font-weight="600" fill="#334155">26.08.2026 18:00</text>
+  
+  <rect x="175" y="138" width="80" height="22" rx="4" fill="#eff6ff"/>
+  <text x="187" y="153" font-size="11" font-weight="600" fill="#2563eb">Исходящий</text>
+
+  <rect x="275" y="138" width="95" height="22" rx="4" fill="#f1f5f9"/>
+  <text x="284" y="153" font-size="11" font-weight="500" fill="#64748b">Не определено</text>
+
+  <rect x="440" y="138" width="75" height="22" rx="4" fill="#f1f5f9" stroke="#e2e8f0"/>
+  <text x="450" y="153" font-size="11" font-weight="500" fill="#64748b">Робот/IVR</text>
+
+  <text x="560" y="153" font-size="13" font-weight="700" fill="#94a3b8">—</text>
+
+  <text x="635" y="152" font-size="12" font-weight="700" fill="#475569">автоответчик</text>
+  <text x="635" y="170" font-size="11" font-weight="500" fill="#3b82f6">▼ Показать транскрипт</text>
+  <text x="765" y="170" font-size="11" fill="#94a3b8">[00:00] Канал 0: К сожалению, мы не можем ответить на ваш звонок, пожалуйста...</text>
+
+  <!-- Row 2: Unanswered -->
+  <line x1="35" y1="188" x2="1165" y2="188" stroke="#f1f5f9"/>
+  <text x="50" y="212" font-size="12" font-weight="600" fill="#334155">26.08.2026 17:59</text>
+
+  <rect x="175" y="198" width="80" height="22" rx="4" fill="#eff6ff"/>
+  <text x="187" y="213" font-size="11" font-weight="600" fill="#2563eb">Исходящий</text>
+
+  <rect x="275" y="198" width="75" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="283" y="213" font-size="11" font-weight="500" fill="#94a3b8">Без ответа</text>
+
+  <rect x="440" y="198" width="75" height="22" rx="4" fill="#f8fafc"/>
+  <text x="445" y="213" font-size="11" font-weight="500" fill="#94a3b8">Не определено</text>
+
+  <text x="560" y="213" font-size="13" font-weight="700" fill="#94a3b8">—</text>
+  <text x="635" y="212" font-size="12" fill="#64748b">Нет записи разговора — вероятно, звонок остался без ответа.</text>
+
+  <!-- Row 3 (FEATURED HERO ROW): Real Sale Call with Score 7 and Recommendations -->
+  <line x1="35" y1="235" x2="1165" y2="235" stroke="#e2e8f0"/>
+  <rect x="35" y="238" width="1130" height="320" rx="8" fill="#f0fdf4" fill-opacity="0.45" stroke="#bbf7d0" stroke-width="1.5"/>
+
+  <text x="50" y="270" font-size="12" font-weight="700" fill="#0f172a">26.08.2026 17:52</text>
+
+  <rect x="175" y="255" width="80" height="22" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="187" y="270" font-size="11" font-weight="700" fill="#1d4ed8">Исходящий</text>
+
+  <rect x="275" y="255" width="145" height="22" rx="4" fill="#e0e7ff" stroke="#c7d2fe"/>
+  <text x="283" y="270" font-size="11" font-weight="700" fill="#4338ca">Продажа (мы продаём)</text>
+
+  <rect x="440" y="255" width="65" height="22" rx="4" fill="#dcfce7" stroke="#86efac"/>
+  <text x="448" y="270" font-size="11" font-weight="700" fill="#15803d">Человек</text>
+
+  <!-- Score 7 Pill -->
+  <circle cx="565" cy="266" r="16" fill="#ea580c"/>
+  <text x="560" y="272" font-size="15" font-weight="900" fill="#ffffff">7</text>
+  <text x="548" y="295" font-size="9" font-weight="700" fill="#c2410c">из 10 баллов</text>
+
+  <!-- Call Summary -->
+  <text x="635" y="268" font-size="12.5" font-weight="700" fill="#0f172a">
+    Звонок от менеджера компании к клиенту для уточнения деталей заявки и назначения встречи
+  </text>
+  <text x="635" y="286" font-size="12" fill="#334155">
+    для обсуждения сотрудничества. Скрипт соблюдён частично, выявлен интерес к поставкам оборудования.
+  </text>
+
+  <!-- AI Recommendations Box (Lightbulb) -->
+  <rect x="635" y="300" width="510" height="68" rx="8" fill="#fefce8" stroke="#fef08a" stroke-width="1.2"/>
+  <text x="648" y="320" font-size="12" font-weight="700" fill="#854d0e">💡 Рекомендации ИИ для повышения конверсии менеджера:</text>
+  <text x="648" y="338" font-size="11" fill="#713f12">• Более детально выяснять потребности клиента, задавать уточняющие вопросы;</text>
+  <text x="648" y="354" font-size="11" fill="#713f12">• Предложить варианты встречи с учетом часовых поясов; Зафиксировать дедлайн.</text>
+
+  <!-- Expand Transcript Box -->
+  <rect x="635" y="380" width="510" height="162" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <path d="M 635 380 L 1145 380 L 1145 406 L 635 406 Z" fill="#f8fafc"/>
+  <text x="648" y="398" font-size="11" font-weight="700" fill="#2563eb">▼ Транскрипт диалога (Yandex SpeechKit ASR):</text>
+
+  <text x="648" y="424" font-size="11" font-weight="600" fill="#0f172a">[00:00] Менеджер (Канал 1):</text>
+  <text x="795" y="424" font-size="11" fill="#334155">Отдел, добрый день!</text>
+
+  <text x="648" y="442" font-size="11" font-weight="600" fill="#64748b">[00:01] Клиент (Канал 0):</text>
+  <text x="795" y="442" font-size="11" fill="#334155">Здравствуйте.</text>
+
+  <text x="648" y="460" font-size="11" font-weight="600" fill="#0f172a">[00:04] Менеджер (Канал 1):</text>
+  <text x="795" y="460" font-size="11" fill="#334155">Это Данил, компания по России. Получили вашу заявку, хотели уточнить детали.</text>
+
+  <text x="648" y="478" font-size="11" font-weight="600" fill="#64748b">[00:10] Клиент (Канал 0):</text>
+  <text x="795" y="478" font-size="11" fill="#334155">Угу.</text>
+
+  <text x="648" y="496" font-size="11" font-weight="600" fill="#0f172a">[00:13] Менеджер (Канал 1):</text>
+  <text x="795" y="496" font-size="11" fill="#334155">Есть у вас время? Подскажите сферу и объём поставок оборудования...</text>
+
+  <text x="648" y="514" font-size="11" font-weight="600" fill="#64748b">[00:26] Клиент (Канал 0):</text>
+  <text x="795" y="514" font-size="11" fill="#334155">Поставьте это оборудование. Продажа и доставка по нашему филиалу.</text>
+
+  <text x="648" y="532" font-size="10" font-style="italic" fill="#94a3b8">... развернуть полный стенографический отчет звонка (длительность 02:44)</text>
+
+  <!-- Row 4: Incoming Call -->
+  <line x1="35" y1="575" x2="1165" y2="575" stroke="#f1f5f9"/>
+  <text x="50" y="605" font-size="12" font-weight="600" fill="#334155">26.08.2026 16:55</text>
+
+  <rect x="175" y="591" width="80" height="22" rx="4" fill="#ecfdf5"/>
+  <text x="189" y="606" font-size="11" font-weight="600" fill="#059669">Входящий</text>
+
+  <rect x="275" y="591" width="75" height="22" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="283" y="606" font-size="11" font-weight="500" fill="#94a3b8">Без ответа</text>
+
+  <rect x="440" y="591" width="75" height="22" rx="4" fill="#f8fafc"/>
+  <text x="445" y="606" font-size="11" font-weight="500" fill="#94a3b8">Не определено</text>
+
+  <text x="560" y="606" font-size="13" font-weight="700" fill="#94a3b8">—</text>
+  <text x="635" y="605" font-size="12" fill="#64748b">Нет записи разговора — вероятно, звонок остался без ответа.</text>
+
+  <!-- Footer Info Bar -->
+  <rect x="35" y="630" width="1130" height="22" fill="#ffffff"/>
+  <text x="50" y="642" font-size="11" fill="#94a3b8">Синхронизация с карточкой сделки CRM Битрикс24 выполнена автоматически за 4.2 сек.</text>
+</svg>

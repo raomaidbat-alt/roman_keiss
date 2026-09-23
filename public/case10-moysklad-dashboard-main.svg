@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="100%" height="100%" style="background:#fff0f6; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow-soft" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#f43f5e" flood-opacity="0.08" />
+    </filter>
+    <filter id="shadow-card" x="-2%" y="-2%" width="104%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.04" />
+    </filter>
+    <linearGradient id="primary-grad" x1="0" y1="0" x2="1" y2="0">
+      <feStop offset="0%" stop-color="#e11d48"/>
+      <feStop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1">
+      <feStop offset="0%" stop-color="#fef9c3"/>
+      <feStop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top App Header -->
+  <rect x="0" y="0" width="1200" height="70" fill="#ffffff" />
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#fbcfe8" stroke-width="1" />
+  
+  <text x="40" y="42" font-size="22" font-weight="800" fill="#be185d">❤️ Главная</text>
+  <text x="40" y="58" font-size="11" font-weight="500" fill="#db2777">Итоги дня • Ювелирный ритейл Anna Maslovskaya</text>
+
+  <!-- Sync Status on right -->
+  <text x="1100" y="35" font-size="11" font-weight="600" fill="#db2777" text-anchor="end">Обновлено: 17.09.2026, 23:40:28</text>
+  <text x="1100" y="52" font-size="11" font-weight="500" fill="#9d174d" text-anchor="end">Синхронизация с МойСклад: 17.09.2026, 17:55:00 [Read-Only]</text>
+  <circle cx="1140" cy="42" r="18" fill="#fdf2f8" stroke="#fbcfe8" />
+  <path d="M1135 42 a 5 5 0 1 1 9 3 l 2 2 m -2 -5 v 3 h -3" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Main Container -->
+  <!-- Top Banner: Последние данные -->
+  <rect x="40" y="90" width="1120" height="70" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="65" y="118" font-size="11" font-weight="800" fill="#ec4899" letter-spacing="1.5">ПОСЛЕДНИЕ ДАННЫЕ</text>
+  <text x="65" y="142" font-size="18" font-weight="800" fill="#1e293b">17 сент. 2026 г. <tspan font-size="13" font-weight="500" fill="#64748b">• Локальная база SQLite синхронизирована</tspan></text>
+
+  <!-- 8 Core Metric Cards Grid -->
+  <!-- Card 1: Выручка (Active highlighted) -->
+  <rect x="40" y="180" width="265" height="110" rx="16" fill="url(#primary-grad)" filter="url(#shadow-soft)" />
+  <text x="60" y="206" font-size="10" font-weight="800" fill="#ffe4e6" letter-spacing="1.2">ВЫРУЧКА</text>
+  <text x="60" y="244" font-size="28" font-weight="900" fill="#ffffff">4 399 ₽</text>
+  <text x="60" y="272" font-size="12" font-weight="600" fill="#fecdd3">↘ -91.6% к прошлому дню</text>
+
+  <!-- Card 2: Заказы -->
+  <rect x="325" y="180" width="265" height="110" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="345" y="206" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">ЗАКАЗЫ</text>
+  <text x="345" y="244" font-size="28" font-weight="900" fill="#0f172a">3</text>
+  <text x="345" y="272" font-size="12" font-weight="700" fill="#059669">↗ +50.0% к прошлому дню</text>
+
+  <!-- Card 3: Продано изделий -->
+  <rect x="610" y="180" width="265" height="110" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="630" y="206" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">ПРОДАНО ИЗДЕЛИЙ</text>
+  <text x="630" y="244" font-size="28" font-weight="900" fill="#0f172a">1 <tspan font-size="16" font-weight="600" fill="#64748b">шт.</tspan></text>
+  <text x="630" y="272" font-size="12" font-weight="600" fill="#e11d48">↘ -85.7% к прошлому дню</text>
+
+  <!-- Card 4: Средний чек -->
+  <rect x="895" y="180" width="265" height="110" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="915" y="206" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">СРЕДНИЙ ЧЕК</text>
+  <text x="915" y="244" font-size="28" font-weight="900" fill="#0f172a">1 466 ₽</text>
+  <text x="915" y="272" font-size="12" font-weight="600" fill="#e11d48">↘ -94.4% к прошлому дню</text>
+
+  <!-- Row 2 Metrics -->
+  <!-- Card 5: Возвраты -->
+  <rect x="40" y="305" width="265" height="110" rx="16" fill="#fff1f2" stroke="#fecdd3" filter="url(#shadow-card)" />
+  <text x="60" y="331" font-size="10" font-weight="800" fill="#e11d48" letter-spacing="1.2">ВОЗВРАТЫ</text>
+  <text x="240" y="331" font-size="11" font-weight="600" fill="#f43f5e">1 возврат</text>
+  <text x="60" y="370" font-size="26" font-weight="900" fill="#be123c">11 400 ₽</text>
+  <text x="60" y="396" font-size="11" font-weight="500" fill="#9f1239">Включает скорректированные позиции</text>
+
+  <!-- Card 6: Новые заказы -->
+  <rect x="325" y="305" width="265" height="110" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="345" y="331" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">НОВЫЕ ЗАКАЗЫ</text>
+  <text x="535" y="331" font-size="11" font-weight="600" fill="#ec4899">2 шт.</text>
+  <text x="345" y="370" font-size="26" font-weight="900" fill="#0f172a">43 699 ₽</text>
+  <text x="345" y="396" font-size="11" font-weight="500" fill="#64748b">Ожидают комплектации склада</text>
+
+  <!-- Card 7: Золото -->
+  <rect x="610" y="305" width="265" height="110" rx="16" fill="#fffbeb" stroke="#fde68a" filter="url(#shadow-card)" />
+  <text x="630" y="331" font-size="10" font-weight="800" fill="#b45309" letter-spacing="1.2">ЗОЛОТО</text>
+  <text x="820" y="331" font-size="11" font-weight="600" fill="#b45309">0 шт.</text>
+  <text x="630" y="370" font-size="26" font-weight="900" fill="#92400e">0 ₽</text>
+  <text x="630" y="396" font-size="11" font-weight="500" fill="#78350f">Категория: Белое / Желтое золото</text>
+
+  <!-- Card 8: Серебро -->
+  <rect x="895" y="305" width="265" height="110" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="915" y="331" font-size="10" font-weight="800" fill="#ec4899" letter-spacing="1.2">СЕРЕБРО</text>
+  <text x="1105" y="331" font-size="11" font-weight="600" fill="#ec4899">0 шт.</text>
+  <text x="915" y="370" font-size="26" font-weight="900" fill="#0f172a">0 ₽</text>
+  <text x="915" y="396" font-size="11" font-weight="500" fill="#64748b">Категория: Серебро 925 пробы</text>
+
+  <!-- Comparative Analysis Blocks -->
+  <!-- Block 1: Сравнение с прошлым днем -->
+  <g transform="translate(40, 435)">
+    <rect x="0" y="0" width="550" height="210" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="25" y="32" font-size="11" font-weight="800" fill="#ec4899" letter-spacing="1.5">СРАВНЕНИЕ С ПРОШЛЫМ ДНЁМ</text>
+    <text x="525" y="32" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="end">16 сент. 2026 г.</text>
+
+    <!-- Subgrid 2x2 -->
+    <rect x="25" y="50" width="240" height="65" rx="12" fill="#fff1f2" stroke="#ffe4e6" />
+    <text x="40" y="70" font-size="9" font-weight="800" fill="#e11d48">ВЫРУЧКА</text>
+    <text x="40" y="90" font-size="15" font-weight="800" fill="#0f172a">52 394 ₽</text>
+    <text x="40" y="105" font-size="10" font-weight="700" fill="#e11d48">-91.6% сегодня</text>
+
+    <rect x="285" y="50" width="240" height="65" rx="12" fill="#f8fafc" stroke="#f1f5f9" />
+    <text x="300" y="70" font-size="9" font-weight="800" fill="#ec4899">ЗАКАЗЫ</text>
+    <text x="300" y="90" font-size="15" font-weight="800" fill="#0f172a">2</text>
+    <text x="300" y="105" font-size="10" font-weight="700" fill="#059669">+50.0% сегодня</text>
+
+    <rect x="25" y="125" width="240" height="65" rx="12" fill="#fff1f2" stroke="#ffe4e6" />
+    <text x="40" y="145" font-size="9" font-weight="800" fill="#e11d48">ИЗДЕЛИЯ</text>
+    <text x="40" y="165" font-size="15" font-weight="800" fill="#0f172a">7 шт.</text>
+    <text x="40" y="180" font-size="10" font-weight="700" fill="#e11d48">-85.7% сегодня</text>
+
+    <rect x="285" y="125" width="240" height="65" rx="12" fill="#fff1f2" stroke="#ffe4e6" />
+    <text x="300" y="145" font-size="9" font-weight="800" fill="#e11d48">СРЕДНИЙ ЧЕК</text>
+    <text x="300" y="165" font-size="15" font-weight="800" fill="#0f172a">26 197 ₽</text>
+    <text x="300" y="180" font-size="10" font-weight="700" fill="#e11d48">-94.4% сегодня</text>
+  </g>
+
+  <!-- Block 2: Сравнение с прошлой неделей -->
+  <g transform="translate(610, 435)">
+    <rect x="0" y="0" width="550" height="210" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+    <text x="25" y="32" font-size="11" font-weight="800" fill="#ec4899" letter-spacing="1.5">СРАВНЕНИЕ С ПРОШЛОЙ НЕДЕЛЕЙ</text>
+    <text x="525" y="32" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="end">10 сент. 2026 г.</text>
+
+    <!-- Subgrid 2x2 -->
+    <rect x="25" y="50" width="240" height="65" rx="12" fill="#f8fafc" stroke="#f1f5f9" />
+    <text x="40" y="70" font-size="9" font-weight="800" fill="#64748b">ВЫРУЧКА</text>
+    <text x="40" y="90" font-size="15" font-weight="800" fill="#0f172a">0 ₽</text>
+    <text x="40" y="105" font-size="10" font-weight="500" fill="#94a3b8">нет сравнения</text>
+
+    <rect x="285" y="50" width="240" height="65" rx="12" fill="#f8fafc" stroke="#f1f5f9" />
+    <text x="300" y="70" font-size="9" font-weight="800" fill="#64748b">ЗАКАЗЫ</text>
+    <text x="300" y="90" font-size="15" font-weight="800" fill="#0f172a">0</text>
+    <text x="300" y="105" font-size="10" font-weight="500" fill="#94a3b8">нет сравнения</text>
+
+    <rect x="25" y="125" width="240" height="65" rx="12" fill="#f8fafc" stroke="#f1f5f9" />
+    <text x="40" y="145" font-size="9" font-weight="800" fill="#64748b">ИЗДЕЛИЯ</text>
+    <text x="40" y="165" font-size="15" font-weight="800" fill="#0f172a">0</text>
+    <text x="40" y="180" font-size="10" font-weight="500" fill="#94a3b8">нет сравнения</text>
+
+    <rect x="285" y="125" width="240" height="65" rx="12" fill="#f8fafc" stroke="#f1f5f9" />
+    <text x="300" y="145" font-size="9" font-weight="800" fill="#64748b">СРЕДНИЙ ЧЕК</text>
+    <text x="300" y="165" font-size="15" font-weight="800" fill="#0f172a">0 ₽</text>
+    <text x="300" y="180" font-size="10" font-weight="500" fill="#94a3b8">нет сравнения</text>
+  </g>
+
+  <!-- Bottom Banner: Лидеры Дня & AI сводка -->
+  <rect x="40" y="665" width="1120" height="115" rx="16" fill="#ffffff" stroke="#fbcfe8" filter="url(#shadow-card)" />
+  <text x="65" y="695" font-size="13" font-weight="800" fill="#be185d">👑 ЛИДЕРЫ ДНЯ &amp; БЕЗОПАСНАЯ AI-СВОДКА</text>
+  <text x="1135" y="695" font-size="11" font-weight="600" fill="#ec4899" text-anchor="end">до 5 позиций по выручке</text>
+  <text x="65" y="722" font-size="12" font-weight="500" fill="#475569">
+    • Колье «молитва» круг с бриллиантом (55 см) — 4 399 ₽ (1 шт.) | Выручка за сутки сформирована флагманской позицией.
+  </text>
+  <text x="65" y="745" font-size="12" font-weight="600" fill="#059669">
+    ✓ МойСклад API подключен в режиме Read-Only. Персональные данные клиентов и токены полностью изолированы в локальной SQLite.
+  </text>
+  <text x="65" y="765" font-size="11" font-weight="500" fill="#94a3b8">
+    Автоматическая отправка сводки в Telegram-бот: @anna_maslovscau_sclad_bot каждый вечер в 21:00.
+  </text>
+
+</svg>
